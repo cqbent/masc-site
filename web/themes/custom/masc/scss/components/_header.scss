@@ -1,0 +1,212 @@
+#site-header {
+  font-size: .875em;
+  .header-top {
+    background-color: $dark-gray;
+    color: $white;
+    a {
+      color: $white;
+      font-size: .75em;
+      text-transform: uppercase;
+    }
+    .outer-wrapper {
+      text-align: right;
+      div {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+
+    .block-search {
+      .form-item {
+        display: inline-block;
+        margin: 0;
+        input[type=search] {
+          background: none;
+          padding: 2px 5px;
+          border-radius: 0;
+          margin: 0;
+          color: $white;
+          font-size: em(13px);
+          text-transform: uppercase;
+        }
+      }
+      input.form-submit {
+        border-radius: 0;
+        padding: 5px 10px;
+        font-size: .8em;
+        text-transform: uppercase;
+        display: none;
+      }
+
+    }
+  }
+  .outer-wrapper {
+    position: relative;
+    padding: 20px 0;
+  }
+  .site-logo {
+    width: 200px;
+    float: left;
+    margin-left: 20px;
+    z-index: 12;
+    position: relative;
+    img {
+      width: 200px;
+    }
+  }
+  nav {
+    text-transform: uppercase;
+    font-size: .875em;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 11;
+    margin-top: 40px;
+    h2 {
+      float: right;
+      height: 58px;
+      color: $gray-green;
+      text-align: center;
+      letter-spacing: 1px;
+      cursor: pointer;
+      @include clearfix;
+      &:before {
+        content: " ";
+        width: 42px;
+        height: 32px;
+        background-image: url(../images/hamburger_menu.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+    .menu {
+      display: none;
+      clear: both;
+      margin: 0;
+      background-color: $blue;
+      .menu-item {
+        list-style: none;
+        font-weight: 600;
+        position: relative;
+        border-bottom: 1px #7ecedf solid;
+        padding: 0 10px;
+        cursor: pointer;
+        &:last-child {
+          border: none;
+        }
+        a {
+          display: block;
+          padding: 10px;
+          color: $white;
+        }
+        &.menu-item--expanded {
+          @include clearfix;
+          &:before {
+            content: ' ';
+            width: 40px;
+            height: 38px;
+            background-image: url(../images/caret_down.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $gray-green;
+            background-size: 50%;
+            float: right;
+            margin-top: 0;
+          }
+          &.active {
+            .menu {
+              display: block;
+            }
+            &:before {
+              background-image: url(../images/caret_up.svg);
+            }
+          }
+          .menu {
+            display: none;
+            background-color: $gray-green;
+            .menu-item {
+              font-weight: 400;
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      .menu {
+        display: block;
+      }
+    }
+    @include media($tablet) {
+      .menu {
+        width: 50%;
+        float: right;
+        .menu-item {
+          .menu {
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+    @include media($desktop) {
+      padding: 0;
+      right: 0;
+      bottom: 15px;
+      width: auto;
+      h2 {
+        display: none;
+      }
+      .menu {
+        display: block;
+        width: 100%;
+        background: none;
+        .menu-item, .menu-item.menu-item--expanded {
+          float: left;
+          margin: 0 10px;
+          border: none;
+          padding: 0;
+          a {
+            color: $gray-green;
+            padding: 5px 10px;
+            &:hover {
+              color: $blue;
+            }
+          }
+          .menu {
+            display: none;
+            position: absolute;
+            background: none;
+            padding-top: 15px;
+            width: 100%;
+            min-width: 150px;
+            .menu-item {
+              background-color: $blue;
+              float: none;
+              margin: 0;
+              a {
+                color: $white;
+              }
+              .menu {
+                position: relative;
+                padding: 0 0 0 1em;
+              }
+            }
+          }
+          &:hover .menu {
+            display: block;
+          }
+          &.menu-item--expanded {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

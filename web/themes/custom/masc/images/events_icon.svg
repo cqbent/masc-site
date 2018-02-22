@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="916 2033.4 106.6 106.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e65100;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="events_icon" data-name="events icon" transform="translate(916 2033.4)">
+    <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="53.3" cy="53.3" r="53.3" transform="translate(0 0)"/>
+    <g id="Group_14" data-name="Group 14">
+      <path id="Path_56" data-name="Path 56" class="cls-2" d="M77.9,29.9H69.6V24.4H64.1V41h5.5V35.5h8.3V76.9H28.2V35.4h5.5V29.9H28.2a5.549,5.549,0,0,0-5.5,5.5V76.8a5.549,5.549,0,0,0,5.5,5.5H77.9a5.549,5.549,0,0,0,5.5-5.5V35.4A5.484,5.484,0,0,0,77.9,29.9Z"/>
+      <path id="Path_57" data-name="Path 57" class="cls-2" d="M42,35.4H61.4V29.9H42V24.4H36.5V40.9H42Z"/>
+      <rect id="Rectangle_26" data-name="Rectangle 26" class="cls-2" width="11" height="11" transform="translate(33.8 46.4)"/>
+      <rect id="Rectangle_27" data-name="Rectangle 27" class="cls-2" width="11" height="11" transform="translate(47.6 46.4)"/>
+      <rect id="Rectangle_28" data-name="Rectangle 28" class="cls-2" width="11" height="11" transform="translate(61.4 46.4)"/>
+      <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-2" width="11" height="11" transform="translate(33.8 60.3)"/>
+      <rect id="Rectangle_30" data-name="Rectangle 30" class="cls-2" width="11" height="11" transform="translate(47.6 60.3)"/>
+    </g>
+  </g>
+</svg>
