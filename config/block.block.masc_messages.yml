@@ -1,0 +1,22 @@
+uuid: 5f97587b-ae6e-479b-bc4d-af0733dea466
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - masc
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: masc_messages
+theme: masc
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

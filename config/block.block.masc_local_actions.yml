@@ -1,0 +1,20 @@
+uuid: 0afccd65-560d-4b70-8f6f-6a3a1ee87c12
+langcode: en
+status: true
+dependencies:
+  theme:
+    - masc
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: masc_local_actions
+theme: masc
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

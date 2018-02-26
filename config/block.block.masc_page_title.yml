@@ -1,0 +1,20 @@
+uuid: ec7952dd-ea1c-4ee9-bed7-e88ab319e50c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - masc
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: masc_page_title
+theme: masc
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

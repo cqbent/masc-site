@@ -1,0 +1,25 @@
+uuid: cb41bcb2-aa6f-4281-b33c-f2f5b6f625c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - masc
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: masc_branding
+theme: masc
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
