@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "72e8fa19f2c9f9c138341b62f8083d20",
+    "content-hash": "df5157c7d6718d8dd6dcc25dff823354",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3459,6 +3459,12 @@
         {
             "name": "enyo/dropzone",
             "version": "4.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/enyo/dropzone/archive/v4.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
             "type": "drupal-library"
         },
         {
