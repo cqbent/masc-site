@@ -88,3 +88,36 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+/* block search form */
+.block-search {
+  .form-item, .form-actions {
+    display: inline-block;
+    margin: 0;
+  }
+  input[type=search] {
+    font-size: .875em;
+    width: 150px;
+    padding: 3px;
+  }
+  button {
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center;
+    background-color: $light-blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    padding: 0;
+    font-size: 1rem;
+
+    span {
+      display: none;
+    }
+    &:before {
+
+    }
+
+  }
+}

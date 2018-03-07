@@ -1,27 +1,41 @@
+#breadcrumb {
+  padding: 20px;
+
+}
 .breadcrumb {
+
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;
-
   display: inline-block;
-  margin-bottom: $base-spacing;
+  margin-bottom: 0;
   text-align: left;
 
   a {
     background-color: $breadcrumb-background;
     border-left: 0;
-    border: $breadcrumb-border;
+    //border: $breadcrumb-border;
     color: $breadcrumb-color;
     display: inline-block;
-    font-size: 0.8em;
-    line-height: $breadcrumb-height;
+    font-size: .875rem;
+    //line-height: $breadcrumb-height;
     margin-bottom: 2px;
-    margin-right: -5px;
-    padding: 0 ($breadcrumb-height / 4) 0 ($breadcrumb-height / 2);
+    //margin-right: -5px;
+    //padding: 0 ($breadcrumb-height / 4) 0 ($breadcrumb-height / 2);
     position: relative;
     text-decoration: none;
-
+    padding: 0;
+    display: inline-block;
+    &:after {
+      content: "/";
+      display: inline-block;
+      padding: 0 5px;
+    }
+    &:last-child:after {
+      content: "";
+    }
+    /*
     &:first-child {
       border-bottom-left-radius: $base-border-radius;
       border-left: $breadcrumb-border;
@@ -68,11 +82,12 @@
     &:after {
       border-left-color: $breadcrumb-background;
     }
-
+    */
     @include media($medium-screen) {
       font-size: 1em;
-      padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
+      //padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
     }
   }
 }
+
 

@@ -47,3 +47,18 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+a.social, .block-simple-blocksocial-links a {
+  color: $white;
+  background: $blue;
+  line-height: 25px;
+  width: 25px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  .fab {
+    &:before {
+      margin-left: 4px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+name: Menu Parent Image
+type: module
+description: Display hero containing title and featured image from menu parent node on child pages
+package: Custom
+# core: 8.x
+dependencies:
+  - block
+  - node
+  - menu_item_extras
+
+core: '8.x'

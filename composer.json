@@ -7,19 +7,75 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/masonry",
+        "version": "3.3.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/imagesloaded",
+        "version": "3.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "enyo/dropzone",
+        "version": "4.2.0",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/enyo/dropzone",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
     }
   ],
-    "require": {
+  "require": {
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
+    "desandro/imagesloaded": "3.2.0",
+    "desandro/masonry": "3.3.2",
     "drupal-composer/drupal-scaffold": "^2.0.1",
+    "drupal/admin_toolbar": "^1.23",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
     "drupal/core": "^8",
+    "drupal/devel": "^1.2",
+    "drupal/dropzonejs": "^2.0@alpha",
+    "drupal/entity_browser": "^1.4",
+    "drupal/file_browser": "^1.1",
+    "drupal/imce": "^1.6",
+    "drupal/media_entity": "^1.7",
+    "drupal/media_entity_image": "^1.2",
+    "drupal/menu_block": "^1.4",
+    "drupal/menu_item_extras": "^2.1",
+    "drupal/menu_link_attributes": "^1.0",
+    "drupal/metatag": "^1.4",
     "drupal/neato": "^1.6",
+    "drupal/pathauto": "^1.0",
+    "drupal/redirect": "^1.0",
     "drupal/simple_block": "^1.0@beta",
+    "drupal/svg_image": "^1.8",
+    "drupal/video_embed_field": "^1.5",
     "drush/drush": "~8",
+    "enyo/dropzone": "4.2.0",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8"
   },
@@ -72,6 +128,7 @@
   "extra": {
     "installer-paths": {
       "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
       "web/modules/contrib/{$name}": ["type:drupal-module"],
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],

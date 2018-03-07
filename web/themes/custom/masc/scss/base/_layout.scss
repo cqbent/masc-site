@@ -19,7 +19,7 @@ body {
     main {
       aside {
         &#sidebar-first {
-          @include span-columns(4);
+          @include span-columns(3);
         }
       }
 
@@ -33,7 +33,7 @@ body {
     main {
       aside {
         &#sidebar-second {
-          @include span-columns(4);
+          @include span-columns(3);
         }
       }
 
@@ -64,4 +64,40 @@ body {
 
 .outer-wrapper {
   @include outer-container;
+}
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    flex: 1;
+    -webkit-flex: 1;
+  }
+  @include media($tablet) {
+    &.col-2 {
+      .box {
+        flex: 0 50%;
+        -webkit-flex: 0 50%;
+      }
+    }
+    &.col-3 {
+      .box {
+        flex: 0 33.3333%;
+        -webkit-flex: 0 33.3333%;
+      }
+
+    }
+    &.col-4 {
+      .box {
+        flex: 0 25%;
+        -webkit-flex: 0 25%;
+      }
+    }
+  }
 }

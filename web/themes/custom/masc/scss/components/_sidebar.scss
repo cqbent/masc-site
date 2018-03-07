@@ -1,0 +1,136 @@
+/* sidebar styling */
+
+.sidebar {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  nav {
+    font-family: $heading-font-family;
+    display: none;
+    padding-top: 10px;
+    border-top: 1px $red solid;
+    font-weight: 400;
+    .menu {
+      margin: 0;
+      padding: 0;
+      li.menu-item {
+        display: none;
+        a, a:hover {
+          color: $dark-gray;
+          display: block;
+          padding: 0 0 5px 0;
+          &.is-active {
+            color: $red;
+          }
+        }
+        &.menu-item--active-trail {
+          display: block;
+          li.menu-item {
+            display: block;
+          }
+        }
+        line-height: normal;
+        list-style: none;
+
+        li.menu-item {
+          //text-indent: -1em;
+          //margin-left: 1em;
+        }
+        .menu {
+          li.menu-item {
+            border-bottom: 1px #B2CCD6 solid;
+            .menu li.menu-item {
+              border: none;
+            }
+          }
+        }
+
+      }
+    }
+    > .menu > li.menu-item  {
+      > a {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    @include media ($tablet) {
+      display: block;
+    }
+  }
+  .block {
+    margin-bottom: 3em;
+  }
+  .views-row {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px $light-gray solid;
+    .views-field-title {
+      font-weight: 700;
+    }
+    font-size: .875rem;
+    h2, h3 {
+      font-size: .875rem;
+    }
+    img {
+      display: block;
+    }
+  }
+  .views-table {
+    font-size: rem(12);
+    td, th {
+      padding: 5px;
+    }
+    td {
+      font-size: rem(11);
+    }
+    .views-field-field-place {
+      text-align: right;
+      width: 20%;
+    }
+    .views-field-field-competition {
+      width: 50%;
+    }
+  }
+
+  &#sidebar-second {
+    .block {
+      a {
+        font-weight: 600;
+      }
+      p {
+        margin: 0;
+      }
+      > h2 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+      }
+      .more {
+        font-weight: 600;
+      }
+    }
+  }
+  &#sidebar-first, &#sidebar-second {
+    //padding-top: 40px;
+    .block {
+
+    }
+  }
+  @include media($tablet) {
+    &#sidebar-first {
+      //padding-top: 4.5em;
+      nav {
+        font-size: rem(16);
+      }
+    }
+  }
+  @include media($desktop) {
+    &#sidebar-second {
+      //padding-top: 4.5em;
+      font-size: rem(16);
+    }
+  }
+}

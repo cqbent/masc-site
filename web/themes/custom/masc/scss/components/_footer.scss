@@ -1,7 +1,8 @@
 #site-footer {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
-
+  position: relative;
+  margin-top: 20px;
   ul:not(.contextual-links) {
     padding: 0;
 
@@ -10,22 +11,127 @@
       line-height: 1.5em;
     }
   }
-
   a {
     text-decoration: none;
   }
+  .home & {
+    margin-top: 0;
+  }
   //////////////////////////////////////////////////////////////////////////////////
 
-  section {
+  .inner {
     @include outer-container;
+    position: relative;
   }
 
-  background: $footer-background;
-  padding: ($base-spacing * 2) $gutter;
   width: 100%;
-
+  color: $white;
   .footer-top {
+    background-color: $medium-gray;
+    padding: 20px 40px;
+    text-align: center;
+    .sign-up {
+      p, input {
+        display: inline-block;
+        margin: 0 10px;
+        width: auto;
+        vertical-align: middle;
+      }
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .footer-bottom {
+    background: $blue;
+    padding: 40px;
     margin-bottom: 1em;
+    font-size: rem(14);
+    text-align: center;
+    position: relative;
+    @include clearfix;
+    .block {
+      margin-bottom: 20px;
+    }
+    a {
+      color: $white;
+    }
+    .menu--top-navigation, .menu--main {
+      text-transform: uppercase;
+      ul.menu {
+        margin: 0;
+        text-align: center;
+      }
+    }
+    .contact-info {
+      font-size: em(16);
+      p {
+        margin: 0;
+      }
+    }
+
+    .block-simple-blocksocial-links, .search-block-form {
+      .field {
+        display: inline-block;
+      }
+      text-align: center;
+    }
+    @include media($tablet) {
+      text-align: left;
+      .block {
+        float: left;
+      }
+      .menu--top-navigation, .menu--main {
+        ul.menu {
+          text-align: left;
+        }
+      }
+      .contact-info, .block-simple-blockcontactinfo {
+        width: 35%;
+        margin-right: -35%;
+        margin-left: 0;
+      }
+      .menu--main {
+        width: 25%;
+        margin-left: 35%;
+        margin-right: -60%;
+      }
+      .menu--footer {
+        width: 40%;
+        margin-left: 60%;
+        margin-right: -100%;
+        ul.menu {
+          text-align: left;
+        }
+      }
+      .block-simple-blocksocial-links, .search-block-form {
+        position: absolute;
+        display: block;
+        margin: 0;
+        right: 20px;
+      }
+      .block-simple-blocksocial-links {
+        a {
+          background-color: $white;
+          color: $blue;
+        }
+        margin-top: 50px;
+        ul {
+          list-style: none;
+          li {
+            float: left;
+            padding: 0 5px;
+          }
+        }
+      }
+      .search-block-form {
+        //top: 60px;
+        button {
+          color: $white;
+        }
+      }
+
+    }
   }
 
   .footer-logo {
@@ -38,17 +144,12 @@
   }
 
   .footer-bottom {
-    p {
-      color: $footer-disclaimer-color;
-      font-size: 0.9em;
-      line-height: 1.5em;
-      margin: auto;
-    }
+
   }
 
   .copyright {
-    @include span-columns(4);
-    padding-left: 1em;
+    //@include span-columns(4);
+    //padding-left: 1em;
   }
 
   .utility-menu {

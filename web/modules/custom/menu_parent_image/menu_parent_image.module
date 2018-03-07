@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Module file for menu_parent_image_block
+ */
+
+use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Menu;
+use Drupal\Core\File;
+
+
+// declare theme file(s)
+function menu_parent_image_theme($existing, $type, $theme, $path) {
+  return array(
+    'menu_parent_image' => array(
+      'variables' => array(
+        'image' => NULL,
+        'logo' => NULL,
+        'title' => NULL,
+        'class' => NULL,
+      )
+    ),
+  );
+}
