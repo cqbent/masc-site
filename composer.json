@@ -7,11 +7,37 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/masonry",
+        "version": "3.3.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "desandro/imagesloaded",
+        "version": "3.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
   "require": {
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
+    "desandro/imagesloaded": "3.2.0",
+    "desandro/masonry": "3.3.2",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/admin_toolbar": "^1.23",
     "drupal/config_direct_save": "^1.0",
@@ -87,6 +113,7 @@
   "extra": {
     "installer-paths": {
       "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
       "web/modules/contrib/{$name}": ["type:drupal-module"],
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],

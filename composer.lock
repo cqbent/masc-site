@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fa440c84f0be221823a91c3ab34e9fd",
+    "content-hash": "f7be954e25d2b21581282b49f58f5cd2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -448,6 +448,28 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-12-07T16:16:31+00:00"
+        },
+        {
+            "name": "desandro/imagesloaded",
+            "version": "3.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "desandro/masonry",
+            "version": "3.3.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "dflydev/dot-access-configuration",
