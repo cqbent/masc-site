@@ -16,38 +16,18 @@
       }
     }
 
-    .block-search {
-      .form-item {
-        display: inline-block;
-        margin: 0;
-        input[type=search] {
-          background: none;
-          padding: 2px 5px;
-          border-radius: 0;
-          margin: 0;
-          color: $white;
-          font-size: em(13px);
-          text-transform: uppercase;
-        }
-      }
-      input.form-submit {
-        border-radius: 0;
-        padding: 5px 10px;
-        font-size: .8em;
-        text-transform: uppercase;
-        display: none;
-      }
-
-    }
   }
   .outer-wrapper {
     position: relative;
     padding: 20px 0;
+    height: 150px;
+  }
+  .site-name {
+    display: none;
   }
   .site-logo {
     width: 200px;
     float: left;
-    margin-left: 20px;
     z-index: 12;
     position: relative;
     img {
@@ -56,12 +36,25 @@
   }
   nav {
     text-transform: uppercase;
-    font-size: .875em;
+    .menu {
+      .menu-item {
+        list-style: none;
+        font-weight: 600;
+        padding: 0 10px;
+        a {
+
+        }
+      }
+    }
+  }
+  nav.menu--main {
+    font-family: $heading-font-family;
+    background-color: $blue;
     position: absolute;
     width: 100%;
+    bottom: 0;
     padding: 0 20px;
     z-index: 11;
-    margin-top: 40px;
     h2 {
       float: right;
       height: 58px;
@@ -84,14 +77,11 @@
     .menu {
       display: none;
       clear: both;
-      margin: 0;
+      margin: 0 auto;
       background-color: $blue;
       .menu-item {
-        list-style: none;
-        font-weight: 600;
         position: relative;
-        border-bottom: 1px #7ecedf solid;
-        padding: 0 10px;
+        //border-bottom: 1px #7ecedf solid;
         cursor: pointer;
         &:last-child {
           border: none;
@@ -143,8 +133,7 @@
     }
     @include media($tablet) {
       .menu {
-        width: 50%;
-        float: right;
+        max-width: $max-width;
         .menu-item {
           .menu {
             width: 100%;
@@ -154,10 +143,8 @@
       }
     }
     @include media($desktop) {
-      padding: 0;
-      right: 0;
-      bottom: 15px;
-      width: auto;
+      width: 100vw;
+      margin-left: calc((100vw - 1200px)/2 * -1);
       h2 {
         display: none;
       }
@@ -171,17 +158,17 @@
           border: none;
           padding: 0;
           a {
-            color: $gray-green;
+            color: $white;
             padding: 5px 10px;
             &:hover {
-              color: $blue;
+              //color: $blue;
             }
           }
           .menu {
             display: none;
             position: absolute;
             background: none;
-            padding-top: 15px;
+            //padding-top: 15px;
             width: 100%;
             min-width: 150px;
             .menu-item {
@@ -209,4 +196,55 @@
       }
     }
   }
+
+  .block-simple-blocksocial-links {
+    float: right;
+    //font-size: 20px;
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        padding: 0 5px;
+      }
+    }
+  }
+  .menu--account {
+    float: right;
+    margin-right: 20px;
+    .menu {
+      .menu-item {
+        padding: 3px 10px;
+        float: left;
+      }
+    }
+
+  }
+  .block-search {
+    clear: right;
+    float: right;
+    margin-top: 10px;
+    .form-item {
+      display: inline-block;
+      margin: 0;
+      input[type=search] {
+        background: none;
+        padding: 2px 5px;
+        border-radius: 0;
+        margin: 0;
+        font-size: em(14px);
+        text-transform: uppercase;
+      }
+    }
+    input.form-submit {
+      border-radius: 0;
+      padding: 5px 10px;
+      font-size: .8em;
+      text-transform: uppercase;
+      display: none;
+
+    }
+
+  }
+
+
 }
