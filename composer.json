@@ -31,6 +31,18 @@
           "type": "zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "enyo/dropzone",
+        "version": "4.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/enyo/dropzone/archive/v4.2.0.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
   "require": {
@@ -61,6 +73,7 @@
     "drupal/svg_image": "^1.8",
     "drupal/video_embed_field": "^1.5",
     "drush/drush": "~8",
+    "enyo/dropzone": "4.2.0",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8"
   },
