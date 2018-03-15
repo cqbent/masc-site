@@ -1,0 +1,5 @@
+name: 'Masc Custom Blocks'
+type: module
+description: 'Custom blocks for MASC site'
+core: 8.x
+package: 'Custom'

@@ -1,0 +1,131 @@
+// home styling
+.path-frontpage {
+  #breadcrumb {
+    display: none;
+  }
+  #featured {
+    // home banner
+    #block-homebanner {
+      position: relative;
+      .image {
+        width: 100vw;
+        margin-left: calc((100vw - #{$max-width}) / 2 * -1);
+        img {
+          height: 600px;
+          object-fit: cover;
+        }
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        height: 600px;
+        padding: 20px;
+        @include span-columns(4);
+        @include shift(6);
+        background: rgba($gray-green, .8);
+        color: $white;
+        font-size: rem(40);
+        font-weight: 300;
+        .button {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  main {
+    background-image: url(../images/bluebk.png);
+    max-width: 100%;
+    padding: 3em calc(calc((100vw - #{$max-width}) / 2));
+    #content {
+      h1.page-title {
+        display: none;
+      }
+      span.feature {
+        font-weight: 300;
+        font-size: rem(40);
+        color: $white;
+        line-height: 1em;
+      }
+    }
+  }
+
+  &.one-sidebar.sidebar-second {
+    main {
+      #content {
+        @include span-columns(5);
+      }
+      #sidebar-second {
+        @include span-columns(4);
+        @include shift(1);
+      }
+    }
+  }
+  &.no-sidebars {
+    #content {
+      @include span-columns(6);
+    }
+  }
+
+  .content-bottom {
+    .block {
+      position: relative;
+      box-sizing: border-box;
+      h2 {
+        text-align: center;
+        font-size: rem(22);
+        color: $blue;
+        text-transform: uppercase;
+        padding-top: 60px;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -50px;
+          width: 100%;
+          height: 100px;
+          background-repeat: no-repeat;
+          background-position: center;
+          //margin: -50px auto 10px auto;
+        }
+      }
+      .item-list {
+        .views-field-title {
+          font-weight: 600;
+          font-size: rem(22);
+        }
+        .views-more-link {
+          display: block;
+          text-transform: uppercase;
+          font-size: rem(18);
+          font-weight: 500;
+        }
+      }
+    }
+    .home-news {
+      margin-bottom: 100px;
+      h2:before {
+        background-image: url(../images/megaphone_icon.svg);
+      }
+    }
+    .home-events {
+      background-color: $light-gray;
+      width: 100vw;
+      padding: 20px calc(calc((100vw - #{$max-width}) / 2));
+      margin-left: calc((100vw - #{$max-width}) / 2 * -1);
+      h2:before {
+        background-image: url(../images/events_icon.svg);
+        margin-left: calc((100vw - 1200px) / 2 * -1);
+      }
+    }
+    .block-social-signup-block {
+      height: 575px;
+      margin: 50px 20px;
+      h3 {
+        font-family: $base-font-family;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+}

@@ -118,6 +118,28 @@ select {
     &:before {
 
     }
+  }
+}
 
+// registration form
+details {
+  .registrants-element .entities {
+    border: none;
+    > .details-wrapper {
+      flex-wrap: wrap;
+      padding: 0;
+      .person-controls {
+        display: block;
+
+      }
+    }
+    .person-container {
+      padding: 0;
+      border: 0;
+    }
+  }
+  // hide change button
+  #edit-people-registrants-for-change {
+    display: none;
   }
 }

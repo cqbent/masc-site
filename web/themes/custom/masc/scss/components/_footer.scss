@@ -2,7 +2,6 @@
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   position: relative;
-  margin-top: 20px;
   ul:not(.contextual-links) {
     padding: 0;
 
@@ -61,6 +60,9 @@
       ul.menu {
         margin: 0;
         text-align: center;
+        .menu {
+          display: none;
+        }
       }
     }
     .contact-info {

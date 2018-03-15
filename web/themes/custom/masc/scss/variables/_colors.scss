@@ -1,7 +1,7 @@
 // Color definitions
 $dark-gray: #333 !default;
 $medium-gray: #999 !default;
-$light-gray: #DDD !default;
+$light-gray: #E8E8E8 !default;
 $blue: #1565C0;
 $red: #E65100;
 $green: #4CAF50;
@@ -16,7 +16,7 @@ $base-font-color: $dark-gray !default;
 $base-border-color: gainsboro !default;
 $base-accent-color: #477DCA !default;
 $base-link-color: $base-accent-color !default;
-$action-color: #477DCA !default;
+$action-color: $blue !default;
 
 // Table colors.
 $table-border-color: $base-border-color;

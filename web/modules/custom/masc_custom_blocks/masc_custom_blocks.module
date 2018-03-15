@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains masc_custom_blocks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function masc_custom_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the masc_custom_blocks module.
+    case 'help.page.masc_custom_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom blocks for MASC site') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function masc_custom_blocks_theme() {
+  return array(
+    'social_signup_block' => array(
+      'variables' => array(
+      )
+    )
+  );
+}

@@ -34,7 +34,7 @@ class MenuParentImageBlock extends BlockBase {
       //dsm($active_trail_ids);
     }
 
-    if ($parent_menuitem) {
+    if ($parent_menuitem['title']) {
       return array(
         '#theme' => 'menu_parent_image',
         '#image' => $parent_menu_image['image'],
@@ -59,7 +59,7 @@ class MenuParentImageBlock extends BlockBase {
 
 
   private function menu_item_content($id) {
-    $menu_image = ''; $menu_logo = '';
+    $menu_image = ''; $menu_logo = ''; $menu_link = ''; $menu_title = '';
     $menu_id = explode(':', $id); // just want uuid
     $query = \Drupal::database()->select('menu_link_content', 'mc')
       ->fields('mc', array('id'))
@@ -67,16 +67,19 @@ class MenuParentImageBlock extends BlockBase {
     $result = $query->execute()->fetchAssoc();
     $entity = \Drupal::entityTypeManager()->getStorage('menu_link_content')->load($result['id']); // load menu_link_content entity
     //$entity = \Drupal::entityTypeManager()->getStorage('menu_link_content')->loadByProperties(['id' => [$result['id']]]);
-    $menu_title = $entity->title->getString(); // get title
-    $menu_link = $entity->getUrlObject()->toString(); // get menu link path
-    if ( $img_field = $entity->get('field_menu_image')->first() ) { // if menu image exists then get the image path
-      $menu_image = get_image_properties($img_field);
+    if ($entity) {
+      $menu_title = $entity->title->getString(); // get title
+      $menu_link = $entity->getUrlObject()->toString(); // get menu link path
+      if ( $img_field = $entity->get('field_menu_image')->first() ) { // if menu image exists then get the image path
+        $menu_image = get_image_properties($img_field);
+      }
+      if ( $logo_field = $entity->get('field_menu_logo')->first() ) { // if menu image exists then get the image path
+        $menu_logo = get_image_properties($logo_field);
+        //$logo_entity = $logo_field->get('entity')->getTarget();
+        //$menu_logo = file_create_url($logo_entity->get('uri')->getString());
+      }
     }
-    if ( $logo_field = $entity->get('field_menu_logo')->first() ) { // if menu image exists then get the image path
-      $menu_logo = get_image_properties($logo_field);
-      //$logo_entity = $logo_field->get('entity')->getTarget();
-      //$menu_logo = file_create_url($logo_entity->get('uri')->getString());
-    }
+
     return array(
       'title' => $menu_title,
       'image' => $menu_image,
