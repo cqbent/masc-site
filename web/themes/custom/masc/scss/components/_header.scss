@@ -26,12 +26,12 @@
     display: none;
   }
   .site-logo {
-    width: 200px;
+    width: 300px;
     float: left;
     z-index: 12;
     position: relative;
     img {
-      width: 200px;
+      width: 300px;
     }
   }
   nav {
@@ -122,6 +122,14 @@
                 display: none;
               }
             }
+            .menu {
+              text-transform: none;
+              .menu-item {
+                a {
+                  padding: 0;
+                }
+              }
+            }
           }
         }
       }
@@ -170,7 +178,7 @@
             background: none;
             //padding-top: 15px;
             width: 100%;
-            min-width: 150px;
+            min-width: 180px;
             .menu-item {
               background-color: $blue;
               float: none;
@@ -179,8 +187,9 @@
                 color: $white;
               }
               .menu {
+                min-width: auto;
                 position: relative;
-                padding: 0 0 0 1em;
+                padding: 0 1em;
               }
             }
           }
@@ -231,7 +240,6 @@
         padding: 2px 5px;
         border-radius: 0;
         margin: 0;
-        color: $white;
         font-size: em(14px);
         text-transform: uppercase;
       }

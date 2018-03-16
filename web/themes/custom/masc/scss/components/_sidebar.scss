@@ -42,6 +42,7 @@
             border-bottom: 1px #B2CCD6 solid;
             .menu li.menu-item {
               border: none;
+              margin-left: 1em;
             }
           }
         }
@@ -90,6 +91,19 @@
     }
     .views-field-field-competition {
       width: 50%;
+    }
+  }
+
+  // user login block
+  #block-userlogin {
+    padding: 20px;
+    background-color: $gray-green;
+    color: $white;
+    a, h2 {
+      color: $white !important;
+    }
+    h2, .form-actions {
+      text-align: center;
     }
   }
 

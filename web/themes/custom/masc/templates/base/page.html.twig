@@ -9,7 +9,7 @@
 
   {%  if page.featured %}
     <section id="featured">
-      <div class="columns">
+      <div class="outer-wrapper">
         {{ page.featured }}
       </div>
     </section>
@@ -42,6 +42,14 @@
       </aside>
     {% endif %}
   </main>
+
+  {% if page.content_bottom %}
+    <div class="content-bottom">
+      <div class="outer-wrapper">
+        {{ page.content_bottom }}
+      </div>
+    </div>
+  {% endif %}
 
   {% if page.footer_top or page.footer_bottom %}
     <footer id="site-footer" role="contentinfo">
