@@ -35,6 +35,13 @@ function masc_preprocess_html(&$variables) {
   else {
     $variables['attributes']['class'][] = 'no-sidebars';
   }
+
+  // get path alias, then convert to array, then get root path, then add as class variable
+  $path = \Drupal::service('path.current')->getPath();
+  $path_alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
+  $path_array = explode('/', $path_alias);
+  $variables['attributes']['class'][] = 'section-'.$path_array[1];
+  $variables['attributes']['class'][] = $path_array[count($path_array)-1];
 }
 
 /**
@@ -50,4 +57,48 @@ function masc_preprocess_page(&$variables) {
  * Implements template_preprocess_node.
  * @param array $variables
  */
-function masc_preprocess_node(&$variables) {}
+function masc_preprocess_node(&$variables) {
+  // add node type to classes
+  $type = $variables['node']->getType();
+  $variables['attributes']['class'][] = 'node-type-'.$type;
+}
+
+/*
+ * theme suggestions input alter
+ */
+function masc_theme_suggestions_input_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  $suggestions[] = 'input__' . $element['#type'];
+}
+
+/*
+ * hook_form_alter
+ * for search block form
+ */
+function masc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = 'Search';
+    $form['actions']['submit']['#type'] = 'button';
+    $form['actions']['submit']['#value'] = 'Go';
+  }
+}
+
+/*
+ * add current page to breadcrumb
+ */
+function masc_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb']) {
+    $variables['#cache']['contexts'][] = 'url.path';
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+    if (!empty($page_title)) {
+      $variables['breadcrumb'][] = [
+        'text' => $page_title,
+        'url' => '#'
+      ];
+    }
+  }
+  //dsm($variables['breadcrumb']);
+}
