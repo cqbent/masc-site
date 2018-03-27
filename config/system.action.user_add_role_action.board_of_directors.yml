@@ -1,0 +1,14 @@
+uuid: 3615e554-9721-4c52-8b47-9cf7f3fd0b6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.board_of_directors
+  module:
+    - user
+id: user_add_role_action.board_of_directors
+label: 'Add the Board of Directors role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: board_of_directors

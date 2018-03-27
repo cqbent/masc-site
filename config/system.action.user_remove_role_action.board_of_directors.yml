@@ -1,0 +1,14 @@
+uuid: f6aa299e-ec34-4b76-bbbc-100bb5b39104
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.board_of_directors
+  module:
+    - user
+id: user_remove_role_action.board_of_directors
+label: 'Remove the Board of Directors role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: board_of_directors

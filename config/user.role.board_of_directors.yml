@@ -1,0 +1,9 @@
+uuid: aff09b22-64be-44b5-bf8a-adde190d8114
+langcode: en
+status: true
+dependencies: {  }
+id: board_of_directors
+label: 'Board of Directors'
+weight: 5
+is_admin: null
+permissions: {  }
