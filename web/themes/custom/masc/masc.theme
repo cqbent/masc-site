@@ -42,6 +42,13 @@ function masc_preprocess_html(&$variables) {
   $path_array = explode('/', $path_alias);
   $variables['attributes']['class'][] = 'section-'.$path_array[1];
   $variables['attributes']['class'][] = $path_array[count($path_array)-1];
+
+  if (strstr($path, 'register/registration')) {
+    //$variables['page']['#title'] = 'Register for This Event';
+    //kint($variables['page']);
+  }
+
+
 }
 
 /**
@@ -51,6 +58,14 @@ function masc_preprocess_html(&$variables) {
 function masc_preprocess_page(&$variables) {
   $site_name = \Drupal::configFactory()->get('system.site')->get('name');
   $variables['linked_site_name'] = ['#type' => 'link', '#title' => $site_name, '#url' => Url::fromRoute('<front>')];
+  // get the "resolved" the page title
+  //$request     = \Drupal::request();
+  //$route_match = \Drupal::routeMatch();
+  //$title       = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+}
+
+function masc_preprocess_page_title(&$variables) {
+  //$variables['title'] = 'something here';
 }
 
 /**

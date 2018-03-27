@@ -1,0 +1,19 @@
+uuid: 2118d537-e0dc-48b8-a2e3-00ea1b49204b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_email_address
+    - rng.registration_type.registration
+id: registration.registration.field_email_address
+field_name: field_email_address
+entity_type: registration
+bundle: registration
+label: 'Email Address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

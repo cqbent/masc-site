@@ -1,0 +1,45 @@
+uuid: b6bd8226-917d-48cd-97c8-fbd9aa1ce424
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.twitter_timeline
+  module:
+    - block_class
+    - rng
+    - simple_block
+    - system
+  theme:
+    - masc
+third_party_settings:
+  block_class:
+    classes: ''
+id: twittertimeline
+theme: masc
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'simple_block:twitter_timeline'
+settings:
+  id: 'simple_block:twitter_timeline'
+  label: 'Twitter Timeline'
+  provider: simple_block
+  label_display: visible
+visibility:
+  rng_current_time:
+    id: rng_current_time
+    date: '1521080020'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1521080020'
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

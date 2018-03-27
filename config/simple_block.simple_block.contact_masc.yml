@@ -1,0 +1,11 @@
+uuid: 8f698835-d9db-4eff-a0ba-5df126e0ae86
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: contact_masc
+title: 'Contact Masc'
+content:
+  value: "<p><a href=\"/contact\"><img alt=\"email_icon.svg\" src=\"/sites/default/files/email_icon.svg\" style=\"width:40px;\" /></a></p>\r\n\r\n<p><a href=\"/contact\">Contact Us</a></p>\r\n"
+  format: full_html

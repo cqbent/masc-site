@@ -9,7 +9,7 @@ _core:
 id: masc_local_actions
 theme: masc
 region: content
-weight: -20
+weight: -12
 provider: null
 plugin: local_actions_block
 settings:

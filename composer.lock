@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a6579d6f468849a6c5d0bfea6b44f24",
+    "content-hash": "59a2fdbec7e66a0927517827a2876403",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3701,6 +3701,61 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/metatag",
                 "issues": "http://drupal.org/project/issues/metatag"
+            }
+        },
+        {
+            "name": "drupal/modules_weight",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/modules_weight",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/modules_weight-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "91bca81d95b277f02b5a3bf69d0d94cd794e5306"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1515602585",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "adriancid",
+                    "homepage": "https://www.drupal.org/user/1962106"
+                },
+                {
+                    "name": "artofeclipse",
+                    "homepage": "https://www.drupal.org/user/841626"
+                },
+                {
+                    "name": "josebc",
+                    "homepage": "https://www.drupal.org/user/1376836"
+                }
+            ],
+            "description": "Allows to change the modules execution order.",
+            "homepage": "https://www.drupal.org/project/modules_weight",
+            "support": {
+                "source": "http://cgit.drupalcode.org/modules_weight"
             }
         },
         {

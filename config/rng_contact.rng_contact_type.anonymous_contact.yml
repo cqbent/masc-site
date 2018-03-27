@@ -1,0 +1,8 @@
+uuid: 2fe29f5a-4ecd-46b4-a3d8-13b6f2c97980
+langcode: en
+status: true
+dependencies: {  }
+label: 'Anonymous Contact'
+id: anonymous_contact
+description: ''
+courier_email_field: null

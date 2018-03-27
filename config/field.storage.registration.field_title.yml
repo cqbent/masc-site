@@ -1,0 +1,42 @@
+uuid: 5b6f7fd9-f8ea-493f-8d7e-5330e4d69773
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - rng
+id: registration.field_title
+field_name: field_title
+entity_type: registration
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Mr
+    -
+      value: 1
+      label: Mrs
+    -
+      value: 2
+      label: Ms
+    -
+      value: 3
+      label: Miss
+    -
+      value: 4
+      label: Dr
+    -
+      value: 5
+      label: Rev
+    -
+      value: 6
+      label: Hon
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

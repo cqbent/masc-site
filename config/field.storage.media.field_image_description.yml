@@ -1,0 +1,19 @@
+uuid: b7a0c7ee-7d59-47ec-8442-24c04ee523cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+    - text
+id: media.field_image_description
+field_name: field_image_description
+entity_type: media
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

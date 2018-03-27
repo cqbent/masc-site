@@ -1,0 +1,92 @@
+uuid: 35272e26-97c1-47e5-a2f5-ae4e8d0928df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_fee
+    - field.field.node.event.field_image
+    - field.field.node.event.field_location
+    - field.field.node.event.rng_capacity
+    - field.field.node.event.rng_registrants_duplicate
+    - field.field.node.event.rng_registrants_maximum
+    - field.field.node.event.rng_registrants_minimum
+    - field.field.node.event.rng_registration_groups
+    - field.field.node.event.rng_registration_type
+    - field.field.node.event.rng_reply_to
+    - field.field.node.event.rng_status
+    - node.type.event
+  module:
+    - datetime
+    - svg_image
+    - text
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_event_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fee:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_location:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  rng_capacity: true
+  rng_registrants_duplicate: true
+  rng_registrants_maximum: true
+  rng_registrants_minimum: true
+  rng_registration_groups: true
+  rng_registration_type: true
+  rng_reply_to: true
+  rng_status: true

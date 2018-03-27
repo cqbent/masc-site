@@ -1,0 +1,139 @@
+uuid: 5f57c45f-1c8a-40a1-98d4-5477359d247a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.registration.registration.field_city
+    - field.field.registration.registration.field_email_address
+    - field.field.registration.registration.field_first_name
+    - field.field.registration.registration.field_job_title
+    - field.field.registration.registration.field_last_name
+    - field.field.registration.registration.field_mailing_address
+    - field.field.registration.registration.field_nickname
+    - field.field.registration.registration.field_other_notes
+    - field.field.registration.registration.field_phone_number
+    - field.field.registration.registration.field_purchase_order
+    - field.field.registration.registration.field_registration_type
+    - field.field.registration.registration.field_state
+    - field.field.registration.registration.field_title
+    - field.field.registration.registration.field_unit_suite_apt
+    - field.field.registration.registration.field_zip
+    - rng.registration_type.registration
+id: registration.registration.default
+targetEntityType: registration
+bundle: registration
+mode: default
+content:
+  field_city:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email_address:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_first_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_title:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_last_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_address:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nickname:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_other_notes:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_phone_number:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_purchase_order:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_state:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_unit_suite_apt:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_zip:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

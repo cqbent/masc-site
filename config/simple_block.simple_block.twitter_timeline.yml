@@ -1,0 +1,11 @@
+uuid: 233a59c6-3d45-4f4a-9620-131d759e4365
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: twitter_timeline
+title: 'Twitter Timeline'
+content:
+  value: "<a class=\"twitter-timeline\" style=\"max-width: 100%;\" href=\"https://twitter.com/MASCSchoolComm\" data-lang=\"en\" data-height=\"400\" data-theme=\"light\" data-link-color=\"#015DCA\" data-chrome=\"noborders transparent nofooter\">Tweets by @MASCSchoolComm</a></p>\r\n<script charset=\"utf-8\" type=\"text/javascript\" src=\"//platform.twitter.com/widgets.js\" async=\"\"></script>"
+  format: full_html

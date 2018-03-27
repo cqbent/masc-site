@@ -1,0 +1,39 @@
+uuid: 25567e94-0d59-4c43-9d66-2c6a6b5d1019
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+    - system
+    - user
+  theme:
+    - masc
+id: userlogin
+theme: masc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Login
+  provider: user
+  label_display: visible
+visibility:
+  rng_current_time:
+    id: rng_current_time
+    date: '1521056023'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1521056023'
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

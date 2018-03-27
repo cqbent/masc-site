@@ -1,0 +1,11 @@
+uuid: 0cda2063-5906-4c96-89a3-7a01ca0f1f0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: contactinfo
+title: 'Contact Info'
+content:
+  value: "<p><img alt=\"masc_logo_white.svg\" src=\"/sites/default/files/masc_logo_white.svg\" style=\"width: 309px; height: auto;\" /></p>\r\n\r\n<p>One McKinley Square<br />\r\nBoston, MA 02109</p>\r\n\r\n<p>617-523-8454<br />\r\n1-800-392-6023</p>\r\n"
+  format: full_html

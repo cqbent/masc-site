@@ -1,0 +1,27 @@
+uuid: 45828697-bd0d-4c3b-966f-fb8c3b3cd271
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - masc
+id: mainnavigation_3
+theme: masc
+region: header
+weight: -4
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

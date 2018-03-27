@@ -1,0 +1,19 @@
+uuid: 4030a764-23c0-4512-9cd3-66d7a1e846fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_last_name
+    - rng.registration_type.registration
+id: registration.registration.field_last_name
+field_name: field_last_name
+entity_type: registration
+bundle: registration
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

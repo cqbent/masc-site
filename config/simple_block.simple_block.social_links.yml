@@ -1,0 +1,11 @@
+uuid: a3f19f22-3dfc-4af8-b15d-a4a34fb2864a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: social_links
+title: 'Social Links'
+content:
+  value: "<ul>\r\n\t<li><a href=\"https://www.facebook.com/schoolcommittees\"><i aria-hidden=\"true\" class=\"fab fa-facebook-f\">&nbsp;</i></a></li>\r\n\t<li><a href=\"https://www.twitter.com/MASCSchoolComm\"><i aria-hidden=\"true\" class=\"fab fa-twitter\">&nbsp;</i></a></li>\r\n\t<li><a href=\"https://www.linkedin.com/company/massachusetts-association-of-school-committees-inc\"><i aria-hidden=\"true\" class=\"fab fa-linkedin-in\">&nbsp;</i></a></li>\r\n</ul>\r\n"
+  format: full_html

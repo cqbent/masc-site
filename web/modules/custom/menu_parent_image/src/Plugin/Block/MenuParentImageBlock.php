@@ -31,7 +31,7 @@ class MenuParentImageBlock extends BlockBase {
       //$parent_menuitem = $this->page_parent_menuitem();
       $class = count($active_trail_ids) > 1 ? 'menu-parent-image child' : 'menu-parent-image landing';
       $parent_menu_image = $this->menu_item_content($parent_menuitem) ;
-      //dsm($active_trail_ids);
+      //kint($active_trail_ids);
     }
 
     if ($parent_menuitem['title']) {
@@ -49,7 +49,7 @@ class MenuParentImageBlock extends BlockBase {
     else {
       return array (
         '#type' => 'markup',
-        '#markup' => t('nothing'),
+        '#markup' => t(''),
         '#cache' => array(
           'contexts' => array('url.path'),
         ),

@@ -74,6 +74,7 @@
     "drupal/menu_link_attributes": "^1.0",
     "drupal/menu_trail_by_path": "^1.1",
     "drupal/metatag": "^1.4",
+    "drupal/modules_weight": "^1.6",
     "drupal/neato": "^1.6",
     "drupal/paragraphs": "^1.2",
     "drupal/pathauto": "^1.0",

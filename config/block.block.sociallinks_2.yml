@@ -1,0 +1,22 @@
+uuid: 839ddf17-615b-4899-96c1-e3892ec238a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.social_links
+  module:
+    - simple_block
+  theme:
+    - masc
+id: sociallinks_2
+theme: masc
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'simple_block:social_links'
+settings:
+  id: 'simple_block:social_links'
+  label: 'Social Links'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

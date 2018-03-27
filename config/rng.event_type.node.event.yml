@@ -1,0 +1,26 @@
+uuid: 3f3c6dde-3516-4072-80cb-d4bedac8530a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+    - rng.registrant_type.registrant
+id: node.event
+entity_type: node
+bundle: event
+mirror_operation_to_event_manage: update
+custom_rules: true
+default_registrant: registrant
+people_types:
+  1:
+    entity_type: user
+    bundle: user
+    create: false
+    existing: true
+    entity_form_mode: default
+  2:
+    entity_type: rng_contact
+    bundle: anonymous_contact
+    create: true
+    existing: false
+    entity_form_mode: default

@@ -1,0 +1,9 @@
+uuid: 584a7ca4-2eab-49c2-b00a-1ea8c3850499
+langcode: en
+status: true
+dependencies: {  }
+name: 'Image Category'
+vid: image_category
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 481f56ca-ef2f-43cf-a74a-2ef7c9b2c5ed
+langcode: en
+status: true
+dependencies: {  }
+id: registered
+label: Registered
+weight: 3
+is_admin: null
+permissions: {  }

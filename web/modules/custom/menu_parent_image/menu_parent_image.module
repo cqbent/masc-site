@@ -24,3 +24,5 @@ function menu_parent_image_theme($existing, $type, $theme, $path) {
     ),
   );
 }
+
+

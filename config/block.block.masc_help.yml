@@ -11,7 +11,7 @@ _core:
 id: masc_help
 theme: masc
 region: content
-weight: -30
+weight: -15
 provider: null
 plugin: help_block
 settings:

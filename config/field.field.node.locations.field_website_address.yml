@@ -1,0 +1,23 @@
+uuid: 2fb662dc-ba6d-4e0c-86d1-bfc7d0f4872b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website_address
+    - node.type.locations
+  module:
+    - link
+id: node.locations.field_website_address
+field_name: field_website_address
+entity_type: node
+bundle: locations
+label: 'Website Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

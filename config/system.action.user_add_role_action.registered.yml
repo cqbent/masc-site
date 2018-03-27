@@ -1,0 +1,14 @@
+uuid: c1e3f081-9b0b-4920-9a80-5de89c2b1ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.registered
+  module:
+    - user
+id: user_add_role_action.registered
+label: 'Add the Registered role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: registered

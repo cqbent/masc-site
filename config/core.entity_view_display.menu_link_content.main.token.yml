@@ -1,0 +1,30 @@
+uuid: 6b9c89b1-dafe-48f4-84cc-66ee42b00df0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.token
+    - field.field.menu_link_content.main.field_menu_image
+    - system.menu.main
+  module:
+    - svg_image
+id: menu_link_content.main.token
+targetEntityType: menu_link_content
+bundle: main
+mode: token
+content:
+  field_menu_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  children: true

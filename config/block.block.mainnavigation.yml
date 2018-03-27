@@ -1,4 +1,4 @@
-uuid: b6ed44a8-5978-406a-ae82-c04f081941c4
+uuid: 22c560c1-694f-4440-bb73-81942aa7f89b
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - masc
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: masc_main_menu
+id: mainnavigation
 theme: masc
-region: header
-weight: 0
+region: footer_bottom
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,5 +20,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }

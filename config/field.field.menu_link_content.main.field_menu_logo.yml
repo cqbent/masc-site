@@ -1,0 +1,38 @@
+uuid: 8696accb-8af6-4cde-8db5-e1dbdda18f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_logo
+    - system.menu.main
+  module:
+    - image
+id: menu_link_content.main.field_menu_logo
+field_name: field_menu_logo
+entity_type: menu_link_content
+bundle: main
+label: 'Menu Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: '500 KB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,47 @@
+uuid: b802d285-4d14-41c6-849a-bcf5194b8afb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.home_events
+  module:
+    - block_class
+    - rng
+    - system
+    - views
+  theme:
+    - masc
+third_party_settings:
+  block_class:
+    classes: home-events
+id: views_block__home_events_block_1
+theme: masc
+region: content_bottom
+weight: -12
+provider: null
+plugin: 'views_block:home_events-block_1'
+settings:
+  id: 'views_block:home_events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  rng_current_time:
+    id: rng_current_time
+    date: '1521073263'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1521073263'
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

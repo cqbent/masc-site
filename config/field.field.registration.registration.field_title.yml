@@ -1,0 +1,21 @@
+uuid: 67505b1c-bba8-4f5c-aaca-6003c34b6b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_title
+    - rng.registration_type.registration
+  module:
+    - options
+id: registration.registration.field_title
+field_name: field_title
+entity_type: registration
+bundle: registration
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

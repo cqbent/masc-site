@@ -12,5 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'create anonymous_contact rng_contact'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view own anonymous_contact rng_contact'

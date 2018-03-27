@@ -1,0 +1,19 @@
+uuid: f9f722d5-aef4-4707-a6e5-b32407f67056
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_unit_suite_apt
+    - rng.registration_type.registration
+id: registration.registration.field_unit_suite_apt
+field_name: field_unit_suite_apt
+entity_type: registration
+bundle: registration
+label: 'Unit Suite Apt'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

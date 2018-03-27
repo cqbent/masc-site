@@ -2,6 +2,8 @@ uuid: c3796ba5-d27a-4d00-9a2e-2c7e4417ec25
 langcode: en
 status: true
 dependencies:
+  module:
+    - rng
   theme:
     - masc
 _core:
@@ -9,7 +11,7 @@ _core:
 id: masc_local_tasks
 theme: masc
 region: content
-weight: -40
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:
@@ -19,4 +21,23 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  rng_current_time:
+    id: rng_current_time
+    date: '1520980466'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1520980466'
+    negate: false
+    context_mapping: {  }
+  rng_user_role:
+    id: rng_user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
