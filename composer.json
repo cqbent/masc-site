@@ -61,6 +61,7 @@
     "drupal/console": "^1",
     "drupal/core": "^8",
     "drupal/devel": "^1.2",
+    "drupal/entity": "^1.0",
     "drupal/entity_browser": "^1.4",
     "drupal/file_browser": "^1.1",
     "drupal/geofield_map": "^1.44",
@@ -74,6 +75,7 @@
     "drupal/menu_link_attributes": "^1.0",
     "drupal/menu_trail_by_path": "^1.1",
     "drupal/metatag": "^1.4",
+    "drupal/migrate_tools": "^4.0@beta",
     "drupal/modules_weight": "^1.6",
     "drupal/neato": "^1.6",
     "drupal/paragraphs": "^1.2",
@@ -90,6 +92,7 @@
     "drupal/views_advanced_routing": "^1.0@RC",
     "drupal/views_bulk_edit": "^2.0@beta",
     "drupal/views_bulk_operations": "^2.0",
+    "drupal/wordpress_migrate": "^3.0@alpha",
     "drush/drush": "~8",
     "enyo/dropzone": "4.2.0",
     "rvtraveller/qs-composer-installer": "^1.1",
@@ -172,6 +175,14 @@
         ".htaccess",
         "web.config"
       ]
+    },
+    "patches": {
+      "drupal/migrate_tools": {
+        "Add attachments to migrate UI process": "https://www.drupal.org/files/issues/process_interface_warning_error_multiple_sources-2918047-1.patch"
+      },
+      "drupal/wordpress_migrate": {
+        "Additional options to wordpress_attachments.yml": "https://www.drupal.org/files/issues/wordpress_migrate-file_attachment_migration-2742269-5.patch"
+      }
     }
   },
   "config": {

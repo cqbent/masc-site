@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.categories
   content:
-    - 'taxonomy_term:tags:a1682f26a67fef747832934f55f6e6b42ae84a3e'
+    - 'taxonomy_term:categories:92d5a9e1-bc7f-47ce-b04d-8b417ce4c184'
   module:
     - node
     - taxonomy
@@ -196,16 +196,16 @@ display:
           expose:
             operator: ''
           group: 1
-        field_tags_target_id:
-          id: field_tags_target_id
-          table: node__field_tags
-          field: field_tags_target_id
+        field_categories_target_id:
+          id: field_categories_target_id
+          table: node__field_categories
+          field: field_categories_target_id
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
-            117: 117
+            190: 190
           group: 1
           exposed: false
           expose:
@@ -236,8 +236,8 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: tags
-          hierarchy: true
+          vid: categories
+          hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts:

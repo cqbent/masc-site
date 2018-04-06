@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_image
     - field.field.node.page.field_tags
+    - image.style.thumbnail
     - node.type.page
   module:
     - path
+    - svg_image
     - text
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
@@ -31,6 +35,23 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_categories:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_image:
+    weight: 123
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_tags:
     weight: 121
     settings:
@@ -84,4 +105,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
 hidden: {  }

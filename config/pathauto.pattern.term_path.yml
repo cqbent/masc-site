@@ -10,14 +10,14 @@ label: 'Term Path'
 type: 'canonical_entities:taxonomy_term'
 pattern: '[term:parent]/[term:name]'
 selection_criteria:
-  452cd3ae-e36f-45a6-8328-4ebb77c78a0b:
+  aae09468-0dd1-4705-876d-08c19a75bf42:
     id: 'entity_bundle:taxonomy_term'
     bundles:
-      tags: tags
+      categories: categories
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 452cd3ae-e36f-45a6-8328-4ebb77c78a0b
+    uuid: aae09468-0dd1-4705-876d-08c19a75bf42
 selection_logic: and
 weight: -5
 relationships: {  }

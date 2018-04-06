@@ -1,0 +1,16 @@
+.path-taxonomy {
+  .view-taxonomy-term {
+    .views-row {
+      margin-bottom: 20px;
+      h2 {
+        margin-bottom: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .node__links ul li {
+        padding: 0;
+      }
+    }
+  }
+}

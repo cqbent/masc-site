@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_image
     - field.field.node.page.field_tags
     - node.type.page
   module:
+    - svg_image
     - text
     - user
 _core:
@@ -19,19 +22,28 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_tags:
-    weight: 102
-    label: above
+  field_image:
+    weight: 0
+    label: hidden
     settings:
-      link: true
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: image
     region: content
   links:
-    weight: 101
+    weight: 2
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_categories: true
+  field_tags: true

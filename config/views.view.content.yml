@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_categories
     - field.storage.node.field_tags
+    - taxonomy.vocabulary.categories
     - taxonomy.vocabulary.tags
   module:
     - node
     - taxonomy
     - user
+    - views_bulk_operations
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
@@ -145,14 +148,14 @@ display:
       row:
         type: fields
       fields:
-        node_bulk_form:
-          id: node_bulk_form
-          table: node
-          field: node_bulk_form
+        views_bulk_operations_bulk_form:
+          id: views_bulk_operations_bulk_form
+          table: views
+          field: views_bulk_operations_bulk_form
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Node operations bulk form'
+          label: 'Views bulk operations'
           exclude: false
           alter:
             alter_text: false
@@ -193,11 +196,52 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          batch: true
+          batch_size: 10
+          form_step: true
+          buttons: false
+          clear_on_exposed: 0
           action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
-          entity_type: node
-          plugin_id: node_bulk_form
+          selected_actions:
+            node_assign_owner_action: node_assign_owner_action
+            node_unpromote_action: node_unpromote_action
+            node_promote_action: node_promote_action
+            node_publish_action: node_publish_action
+            node_save_action: node_save_action
+            node_make_sticky_action: node_make_sticky_action
+            node_unpublish_by_keyword_action: node_unpublish_by_keyword_action
+            node_unpublish_action: node_unpublish_action
+            node_make_unsticky_action: node_make_unsticky_action
+            views_bulk_edit: views_bulk_edit
+            views_bulk_operations_delete_entity: views_bulk_operations_delete_entity
+            pathauto_update_alias: pathauto_update_alias
+          preconfiguration:
+            node_assign_owner_action:
+              label_override: ''
+            node_unpromote_action:
+              label_override: ''
+            node_promote_action:
+              label_override: ''
+            node_publish_action:
+              label_override: ''
+            node_save_action:
+              label_override: ''
+            node_make_sticky_action:
+              label_override: ''
+            node_unpublish_by_keyword_action:
+              label_override: ''
+            node_unpublish_action:
+              label_override: ''
+            node_make_unsticky_action:
+              label_override: ''
+            views_bulk_edit:
+              label_override: ''
+              get_bundles_from_results: 1
+            views_bulk_operations_delete_entity:
+              label_override: ''
+            pathauto_update_alias:
+              label_override: ''
+          plugin_id: views_bulk_operations_bulk_form
         title:
           id: title
           table: node_field_data
@@ -396,6 +440,69 @@ display:
           hide_alter_empty: true
           destination: true
           plugin_id: entity_operations
+        field_categories:
+          id: field_categories
+          table: node__field_categories
+          field: field_categories
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Categories
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_tags:
           id: field_tags
           table: node__field_tags
@@ -637,6 +744,54 @@ display:
           plugin_id: node_status
           group: 1
           entity_type: node
+        field_categories_target_id:
+          id: field_categories_target_id
+          table: node__field_categories
+          field: field_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_categories_target_id_op
+            label: Categories
+            description: ''
+            use_operator: false
+            operator: field_categories_target_id_op
+            identifier: field_categories_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              registered: '0'
+              staff: '0'
+              board_of_directors: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         field_tags_target_id:
           id: field_tags_target_id
           table: node__field_tags
@@ -683,6 +838,47 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        body_value:
+          id: body_value
+          table: node__body
+          field: body_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: body_value_op
+            label: 'Body (body)'
+            description: ''
+            use_operator: false
+            operator: body_value_op
+            identifier: body_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              registered: '0'
+              staff: '0'
+              board_of_directors: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
       sorts: {  }
       title: Content
       empty:
@@ -723,6 +919,7 @@ display:
         - user.permissions
       max-age: 0
       tags:
+        - 'config:field.storage.node.field_categories'
         - 'config:field.storage.node.field_tags'
   page_1:
     display_options:
@@ -756,4 +953,5 @@ display:
         - user.permissions
       max-age: 0
       tags:
+        - 'config:field.storage.node.field_categories'
         - 'config:field.storage.node.field_tags'

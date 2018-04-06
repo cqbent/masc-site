@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "59a2fdbec7e66a0927517827a2876403",
+    "content-hash": "314150cd569bbe464c7dce756aab3ec7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1912,16 +1912,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.4.5",
+            "version": "8.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "44a857df6f7ffd063cffed9a41767cdc50dd7474"
+                "reference": "f439a43c7da1df8d16067f797c0bc3498eb4c699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/44a857df6f7ffd063cffed9a41767cdc50dd7474",
-                "reference": "44a857df6f7ffd063cffed9a41767cdc50dd7474",
+                "url": "https://api.github.com/repos/drupal/core/zipball/f439a43c7da1df8d16067f797c0bc3498eb4c699",
+                "reference": "f439a43c7da1df8d16067f797c0bc3498eb4c699",
                 "shasum": ""
             },
             "require": {
@@ -2096,7 +2096,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-02-20T21:35:13+00:00"
+            "time": "2018-03-27T10:03:10+00:00"
         },
         {
             "name": "drupal/courier",
@@ -3653,17 +3653,17 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/metatag",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "f689123bdce93bbf452050261c6be9d15b0e1a5b"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "48f1c2a4e93ef1af1eb4b5b6cc6321e951fd1002"
             },
             "require": {
                 "drupal/core": "*",
@@ -3682,8 +3682,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1513959187",
+                    "version": "8.x-1.5",
+                    "datestamp": "1522344484",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3708,7 +3708,7 @@
             "description": "Manage meta tags for all entities.",
             "homepage": "https://www.drupal.org/project/metatag",
             "keywords": [
-                "php",
+                "Drupal",
                 "seo"
             ],
             "support": {
@@ -3717,18 +3717,149 @@
             }
         },
         {
-            "name": "drupal/modules_weight",
-            "version": "1.6.0",
+            "name": "drupal/migrate_plus",
+            "version": "4.0.0-beta3",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/modules_weight",
-                "reference": "8.x-1.6"
+                "url": "https://git.drupal.org/project/migrate_plus",
+                "reference": "8.x-4.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/modules_weight-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "91bca81d95b277f02b5a3bf69d0d94cd794e5306"
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-4.0-beta3.zip",
+                "reference": "8.x-4.0-beta3",
+                "shasum": "a0da6dc169a0315bf29a8dd0ee2146d18215a56b"
+            },
+            "require": {
+                "drupal/core": "^8.3"
+            },
+            "require-dev": {
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*"
+            },
+            "suggest": {
+                "ext-soap": "*",
+                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-beta3",
+                    "datestamp": "1519400592",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Enhancements to core migration support.",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "support": {
+                "source": "https://cgit.drupalcode.org/migrate_plus",
+                "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "4.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_tools",
+                "reference": "8.x-4.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.0-beta3.zip",
+                "reference": "8.x-4.0-beta3",
+                "shasum": "5256ef34d63bbcc564bd9e1e4434c34f12983dba"
+            },
+            "require": {
+                "drupal/core": "^8.3",
+                "drupal/migrate_plus": "*"
+            },
+            "require-dev": {
+                "drupal/coder": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-beta3",
+                    "datestamp": "1519400285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                },
+                "patches_applied": {
+                    "Add attachments to migrate UI process": "https://www.drupal.org/files/issues/process_interface_warning_error_multiple_sources-2918047-1.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "http://drupal.org/project/migrate_tools",
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_tools",
+                "issues": "http://drupal.org/project/migrate_tools",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/modules_weight",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/modules_weight",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/modules_weight-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "35c15892dd0e8900664cd618c84f13f65f353cab"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3739,8 +3870,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1515602585",
+                    "version": "8.x-1.7",
+                    "datestamp": "1522252984",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3749,16 +3880,19 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "adriancid",
-                    "homepage": "https://www.drupal.org/user/1962106"
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "email": "adriancid@gmail.com",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "artofeclipse",
-                    "homepage": "https://www.drupal.org/user/841626"
+                    "name": "Ma'moun Othman (artofeclipse)",
+                    "homepage": "https://www.drupal.org/u/artofeclipse",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "josebc",
@@ -3767,8 +3901,14 @@
             ],
             "description": "Allows to change the modules execution order.",
             "homepage": "https://www.drupal.org/project/modules_weight",
+            "keywords": [
+                "Drupal",
+                "Modules",
+                "Order"
+            ],
             "support": {
-                "source": "http://cgit.drupalcode.org/modules_weight"
+                "source": "http://cgit.drupalcode.org/modules_weight",
+                "issues": "https://www.drupal.org/project/issues/modules_weight"
             }
         },
         {
@@ -4781,6 +4921,69 @@
             "homepage": "https://www.drupal.org/project/views_templates",
             "support": {
                 "source": "http://cgit.drupalcode.org/views_templates"
+            }
+        },
+        {
+            "name": "drupal/wordpress_migrate",
+            "version": "3.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/wordpress_migrate",
+                "reference": "8.x-3.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/wordpress_migrate-8.x-3.0-alpha2.zip",
+                "reference": "8.x-3.0-alpha2",
+                "shasum": "d622f279a96e4076065b7e2fe0a3606590eaf8af"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/migrate_plus": "*"
+            },
+            "require-dev": {
+                "drupal/ctools": "*",
+                "drupal/migrate_tools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha2",
+                    "datestamp": "1505144644",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Additional options to wordpress_attachments.yml": "https://www.drupal.org/files/issues/wordpress_migrate-file_attachment_migration-2742269-5.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "HongPong",
+                    "homepage": "https://www.drupal.org/user/60005"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Support for importing WordPress sites into Drupal",
+            "homepage": "https://www.drupal.org/project/wordpress_migrate",
+            "support": {
+                "source": "http://cgit.drupalcode.org/wordpress_migrate"
             }
         },
         {
@@ -9761,10 +9964,12 @@
         "drupal/calendar_datetime": 20,
         "drupal/leaflet": 10,
         "drupal/masquerade": 10,
+        "drupal/migrate_tools": 10,
         "drupal/rng_contact": 10,
         "drupal/simple_block": 10,
         "drupal/views_advanced_routing": 5,
-        "drupal/views_bulk_edit": 10
+        "drupal/views_bulk_edit": 10,
+        "drupal/wordpress_migrate": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
