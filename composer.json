@@ -46,6 +46,7 @@
     }
   ],
   "require": {
+    "php": ">=7.0.8",
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
     "desandro/imagesloaded": "3.2.0",
@@ -61,6 +62,7 @@
     "drupal/console": "^1",
     "drupal/core": "^8",
     "drupal/devel": "^1.2",
+    "drupal/ds": "^3.1",
     "drupal/entity": "^1.0",
     "drupal/entity_browser": "^1.4",
     "drupal/file_browser": "^1.1",
@@ -190,7 +192,7 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.0.8"
     }
   }
 }
