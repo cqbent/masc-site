@@ -1,0 +1,19 @@
+uuid: c0f6242e-9e85-4e89-abdc-f452291a2f0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - telephone
+id: contact_message.field_district_fax
+field_name: field_district_fax
+entity_type: contact_message
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

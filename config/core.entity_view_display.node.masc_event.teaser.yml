@@ -1,0 +1,53 @@
+uuid: dd3239cf-33da-4d2f-893e-0b1605af2ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.masc_event.body
+    - field.field.node.masc_event.field_event_category
+    - field.field.node.masc_event.field_event_date
+    - field.field.node.masc_event.field_event_location
+    - field.field.node.masc_event.field_location
+    - field.field.node.masc_event.field_registration_capacity
+    - field.field.node.masc_event.webform
+    - node.type.masc_event
+  module:
+    - datetime
+    - text
+    - user
+_core:
+  default_config_hash: Fa6zbpAgA_GneQsM6majbotpYhY6mZZGnwYrk3LV9rQ
+id: node.masc_event.teaser
+targetEntityType: node
+bundle: masc_event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_event_category: true
+  field_event_location: true
+  field_location: true
+  field_registration_capacity: true
+  webform: true

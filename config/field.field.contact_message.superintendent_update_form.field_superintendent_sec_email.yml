@@ -1,0 +1,19 @@
+uuid: 3f3c74e8-b3b2-4ca2-b24b-ff4758959f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_superintendent_sec_email
+id: contact_message.superintendent_update_form.field_superintendent_sec_email
+field_name: field_superintendent_sec_email
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'Superintendent Secretary Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

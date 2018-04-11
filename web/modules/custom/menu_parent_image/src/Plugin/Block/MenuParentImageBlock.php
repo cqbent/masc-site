@@ -34,7 +34,7 @@ class MenuParentImageBlock extends BlockBase {
       //kint($active_trail_ids);
     }
 
-    if ($parent_menuitem['title']) {
+    if (isset($parent_menuitem['title'])) {
       return array(
         '#theme' => 'menu_parent_image',
         '#image' => $parent_menu_image['image'],

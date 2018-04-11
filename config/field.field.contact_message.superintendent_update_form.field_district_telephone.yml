@@ -1,0 +1,21 @@
+uuid: ef90c484-326c-4012-a305-f91c5851ea3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_district_telephone
+  module:
+    - telephone
+id: contact_message.superintendent_update_form.field_district_telephone
+field_name: field_district_telephone
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'District Telephone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

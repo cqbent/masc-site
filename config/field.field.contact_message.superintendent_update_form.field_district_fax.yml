@@ -1,0 +1,21 @@
+uuid: c7677141-2548-4e64-ac09-80259f66987d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_district_fax
+  module:
+    - telephone
+id: contact_message.superintendent_update_form.field_district_fax
+field_name: field_district_fax
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'District Fax'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

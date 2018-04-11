@@ -1,0 +1,54 @@
+uuid: e897af68-789f-45df-98b9-78e5e6b3669d
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_current_committees
+field_name: field_current_committees
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Advisory Committee on Athletics'
+      label: 'Advisory Committee on Athletics'
+    -
+      value: 'Advocacy Committee'
+      label: 'Advocacy Committee'
+    -
+      value: 'Federal Relations Network'
+      label: 'Federal Relations Network'
+    -
+      value: 'Nominating Committee'
+      label: 'Nominating Committee'
+    -
+      value: 'Legislative Committee'
+      label: 'Legislative Committee'
+    -
+      value: 'MIAA Committee(s)'
+      label: 'MIAA Committee(s)'
+    -
+      value: 'Minority Caucus'
+      label: 'Minority Caucus'
+    -
+      value: 'Regional Schools Committee'
+      label: 'Regional Schools Committee'
+    -
+      value: 'Resolutions Committee'
+      label: 'Resolutions Committee'
+    -
+      value: 'Special Education Committee'
+      label: 'Special Education Committee'
+    -
+      value: 'Other (Describe in comments)'
+      label: 'Other (Describe in comments)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 466bab99-b71c-4433-906f-2404518e8357
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - link
+id: contact_message.field_district_website
+field_name: field_district_website
+entity_type: contact_message
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

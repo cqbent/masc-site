@@ -1,0 +1,37 @@
+uuid: 9bf27a03-fe38-4228-9c10-b82775cbf8cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.webform
+    - node.type.masc_event
+  module:
+    - webform
+_core:
+  default_config_hash: ARroDm1xortVnvAV09F9A1NFbjc7i1GVkY0Tlcyar8Q
+id: node.masc_event.webform
+field_name: webform
+entity_type: node
+bundle: masc_event
+label: Webform
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: c9a4a1ff-ba66-454d-a572-9c2624b73a67
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

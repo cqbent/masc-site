@@ -1,0 +1,19 @@
+uuid: 010b48cb-5ac2-4fb6-ab68-896cd6bd83f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_superintendent_sec_name
+id: contact_message.superintendent_update_form.field_superintendent_sec_name
+field_name: field_superintendent_sec_name
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'Superintendent Secretary Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

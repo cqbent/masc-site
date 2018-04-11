@@ -1,0 +1,19 @@
+uuid: c09f550d-fdb2-4415-8050-52665cbaff36
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_superintendent_email
+id: contact_message.superintendent_update_form.field_superintendent_email
+field_name: field_superintendent_email
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'Superintendent Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

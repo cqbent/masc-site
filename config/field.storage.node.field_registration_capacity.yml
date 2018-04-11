@@ -1,0 +1,22 @@
+uuid: c2a641a4-9b09-4593-9ae6-a3a5aff7d031
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 1M0I2wHMQN7suD7HdEGfz5TLceJlpwwPDhIdJnY09vY
+id: node.field_registration_capacity
+field_name: field_registration_capacity
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

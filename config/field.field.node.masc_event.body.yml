@@ -1,0 +1,24 @@
+uuid: 41c3dce3-ae91-4d98-a137-52965ffcc2fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.masc_event
+  module:
+    - text
+_core:
+  default_config_hash: 5JuXL7BQC_9eaC9XdDxekN7AfzCiBhSt0yjHlp58wrE
+id: node.masc_event.body
+field_name: body
+entity_type: node
+bundle: masc_event
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

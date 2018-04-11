@@ -1,0 +1,133 @@
+uuid: 46420689-bdb4-4553-8a10-e054d6a64fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.field.contact_message.superintendent_update_form.field_district_fax
+    - field.field.contact_message.superintendent_update_form.field_district_mailing_address
+    - field.field.contact_message.superintendent_update_form.field_district_telephone
+    - field.field.contact_message.superintendent_update_form.field_district_website
+    - field.field.contact_message.superintendent_update_form.field_other_information
+    - field.field.contact_message.superintendent_update_form.field_school_district
+    - field.field.contact_message.superintendent_update_form.field_superintendent_email
+    - field.field.contact_message.superintendent_update_form.field_superintendent_name
+    - field.field.contact_message.superintendent_update_form.field_superintendent_sec_email
+    - field.field.contact_message.superintendent_update_form.field_superintendent_sec_name
+  module:
+    - link
+id: contact_message.superintendent_update_form.default
+targetEntityType: contact_message
+bundle: superintendent_update_form
+mode: default
+content:
+  field_district_fax:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_district_mailing_address:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_district_telephone:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_district_website:
+    weight: 9
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_other_information:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_school_district:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_superintendent_email:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_superintendent_name:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_superintendent_sec_email:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_superintendent_sec_name:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

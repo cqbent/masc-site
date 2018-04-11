@@ -1,0 +1,19 @@
+uuid: c62a01af-45ca-444f-8c5b-5f0819772bc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_district_mailing_address
+field_name: field_district_mailing_address
+entity_type: contact_message
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

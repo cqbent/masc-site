@@ -1,0 +1,21 @@
+uuid: 7042b79c-8bfa-466b-ab83-08bed10193d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.request_for_appointment
+    - field.storage.contact_message.field_current_committees
+  module:
+    - options
+id: contact_message.request_for_appointment.field_current_committees
+field_name: field_current_committees
+entity_type: contact_message
+bundle: request_for_appointment
+label: 'Current Committees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

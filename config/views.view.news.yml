@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - taxonomy.vocabulary.tags
-  content:
-    - 'taxonomy_term:tags:a1682f26a67fef747832934f55f6e6b42ae84a3e'
   module:
     - node
     - taxonomy

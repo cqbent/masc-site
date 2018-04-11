@@ -1,0 +1,19 @@
+uuid: ff2d2d33-356c-474a-a479-c595e36c8378
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.member_update_form
+    - field.storage.contact_message.field_new_changed_information
+id: contact_message.member_update_form.field_new_changed_information
+field_name: field_new_changed_information
+entity_type: contact_message
+bundle: member_update_form
+label: 'New Or Changed Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

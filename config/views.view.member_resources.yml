@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - taxonomy.vocabulary.tags
-  content:
-    - 'taxonomy_term:tags:a2ca68db0776d1dea8edf598b2aad68ae0b2a794'
   module:
     - node
     - taxonomy

@@ -1,0 +1,60 @@
+uuid: e25a05dd-cac6-45c5-b087-4c5e65f13d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.member_update_form
+    - field.field.contact_message.member_update_form.field_member_name
+    - field.field.contact_message.member_update_form.field_new_changed_information
+id: contact_message.member_update_form.default
+targetEntityType: contact_message
+bundle: member_update_form
+mode: default
+content:
+  field_member_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_new_changed_information:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

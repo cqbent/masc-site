@@ -1,0 +1,85 @@
+uuid: 29c89bb4-f3a7-4b6e-8148-674f1693921c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.request_for_appointment
+    - field.field.contact_message.request_for_appointment.field_committees_wishlist
+    - field.field.contact_message.request_for_appointment.field_current_committees
+    - field.field.contact_message.request_for_appointment.field_mailing_address
+    - field.field.contact_message.request_for_appointment.field_phone_number
+    - field.field.contact_message.request_for_appointment.field_school_district
+    - field.field.contact_message.request_for_appointment.field_years_on_school_committee
+  module:
+    - address
+    - telephone
+id: contact_message.request_for_appointment.default
+targetEntityType: contact_message
+bundle: request_for_appointment
+mode: default
+content:
+  copy:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_committees_wishlist:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_current_committees:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_mailing_address:
+    weight: 2
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_phone_number:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_school_district:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_years_on_school_committee:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  message: true
+  subject: true

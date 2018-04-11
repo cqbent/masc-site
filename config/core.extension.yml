@@ -13,6 +13,7 @@ module:
   config: 0
   config_direct_save: 0
   contact: 0
+  contact_storage: 0
   contextual: 0
   courier: 0
   ctools: 0
@@ -45,6 +46,7 @@ module:
   leaflet_views: 0
   link: 0
   masc_custom_blocks: 0
+  masc_event_registration: 0
   media_entity: 0
   media_entity_image: 0
   menu_block: 0
@@ -54,7 +56,9 @@ module:
   metatag: 0
   metatag_app_links: 0
   migrate: 0
+  migrate_masc_users: 0
   migrate_plus: 0
+  migrate_source_csv: 0
   migrate_tools: 0
   modules_weight: 0
   node: 0
@@ -95,6 +99,12 @@ module:
   views_bulk_operations: 0
   views_templates: 0
   views_ui: 0
+  webform: 0
+  webform_devel: 0
+  webform_node: 0
+  webform_scheduled_email: 0
+  webform_templates: 0
+  webform_ui: 0
   wordpress_migrate: 0
   wordpress_migrate_ui: 0
   menu_link_content: 1

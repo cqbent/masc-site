@@ -1,0 +1,23 @@
+uuid: 0c7cc25c-62d5-4ab1-8c30-5d5048770ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.storage.contact_message.field_district_website
+  module:
+    - link
+id: contact_message.superintendent_update_form.field_district_website
+field_name: field_district_website
+entity_type: contact_message
+bundle: superintendent_update_form
+label: 'District Website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

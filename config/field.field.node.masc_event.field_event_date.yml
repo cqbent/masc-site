@@ -1,0 +1,23 @@
+uuid: 59563583-258f-4fa1-b4eb-f92d3ee97e04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.masc_event
+  module:
+    - datetime
+_core:
+  default_config_hash: iLPivNJ1YKltymz2OTbkWvH0Ji0c4TsqiHInHIF45Wo
+id: node.masc_event.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: masc_event
+label: 'Event Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

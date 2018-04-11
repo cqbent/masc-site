@@ -1,0 +1,30 @@
+uuid: 892581ae-f15f-478b-a561-4ee7462dce75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.locations
+    - node.type.masc_event
+_core:
+  default_config_hash: 7dEu2ZxYvBrfQs3Z_dT9d-7MlX4W8Z2l01Vd5WOHD-Y
+id: node.masc_event.field_location
+field_name: field_location
+entity_type: node
+bundle: masc_event
+label: 'Location Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

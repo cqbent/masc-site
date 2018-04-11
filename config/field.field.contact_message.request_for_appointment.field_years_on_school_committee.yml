@@ -1,0 +1,19 @@
+uuid: 91ba02e8-6fd9-4ea2-b2bd-8b240b1f71f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.request_for_appointment
+    - field.storage.contact_message.field_years_on_school_committee
+id: contact_message.request_for_appointment.field_years_on_school_committee
+field_name: field_years_on_school_committee
+entity_type: contact_message
+bundle: request_for_appointment
+label: 'Years on School Committee'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

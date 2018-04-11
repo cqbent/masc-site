@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_capacity
+    - node.type.masc_event
+id: node.masc_event.field_registration_capacity
+field_name: field_registration_capacity
+entity_type: node
+bundle: masc_event
+label: 'Maximum number of registrants'
+description: ''
+required: true
+translatable: false
+default_value:
+  - value: 10
+default_value_callback: ''
+settings:
+  min: 1
+  max: 10
+  prefix: ''
+  suffix: ' people'
+field_type: integer

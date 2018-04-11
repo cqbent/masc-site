@@ -1,0 +1,96 @@
+uuid: ed4450f9-9076-4308-91bf-5b989c89cba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.request_for_appointment
+    - field.field.contact_message.request_for_appointment.field_committees_wishlist
+    - field.field.contact_message.request_for_appointment.field_current_committees
+    - field.field.contact_message.request_for_appointment.field_mailing_address
+    - field.field.contact_message.request_for_appointment.field_phone_number
+    - field.field.contact_message.request_for_appointment.field_school_district
+    - field.field.contact_message.request_for_appointment.field_years_on_school_committee
+  module:
+    - address
+    - options
+id: contact_message.request_for_appointment.default
+targetEntityType: contact_message
+bundle: request_for_appointment
+mode: default
+content:
+  field_committees_wishlist:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_current_committees:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mailing_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_phone_number:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_school_district:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_years_on_school_committee:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

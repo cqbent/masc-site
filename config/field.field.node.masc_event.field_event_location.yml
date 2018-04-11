@@ -1,0 +1,38 @@
+uuid: 7d1b703c-5fd8-4700-8d59-6f778ea9c7f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_location
+    - node.type.masc_event
+  module:
+    - address
+_core:
+  default_config_hash: fiaNSAK43OL0EylC1iuSkURgja-mv93XCoTe-urNnGU
+id: node.masc_event.field_event_location
+field_name: field_event_location
+entity_type: node
+bundle: masc_event
+label: 'Event Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    sortingCode: sortingCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    administrativeArea: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

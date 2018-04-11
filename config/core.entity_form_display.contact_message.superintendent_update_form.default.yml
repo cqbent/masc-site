@@ -1,0 +1,125 @@
+uuid: cd37d8b6-a6ae-49bb-8a54-024f0bbfd5ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.superintendent_update_form
+    - field.field.contact_message.superintendent_update_form.field_district_fax
+    - field.field.contact_message.superintendent_update_form.field_district_mailing_address
+    - field.field.contact_message.superintendent_update_form.field_district_telephone
+    - field.field.contact_message.superintendent_update_form.field_district_website
+    - field.field.contact_message.superintendent_update_form.field_other_information
+    - field.field.contact_message.superintendent_update_form.field_school_district
+    - field.field.contact_message.superintendent_update_form.field_superintendent_email
+    - field.field.contact_message.superintendent_update_form.field_superintendent_name
+    - field.field.contact_message.superintendent_update_form.field_superintendent_sec_email
+    - field.field.contact_message.superintendent_update_form.field_superintendent_sec_name
+  module:
+    - link
+    - telephone
+id: contact_message.superintendent_update_form.default
+targetEntityType: contact_message
+bundle: superintendent_update_form
+mode: default
+content:
+  copy:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_district_fax:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_district_mailing_address:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_district_telephone:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_district_website:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_other_information:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_school_district:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_superintendent_email:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_superintendent_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_superintendent_sec_email:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_superintendent_sec_name:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  message: true
+  subject: true

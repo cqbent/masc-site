@@ -1,0 +1,21 @@
+uuid: ee230fbc-0945-4557-96f3-a63bc39cb427
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Submit
+    show_preview: true
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: superintendent_update_form
+label: 'Superintendent Update Form'
+recipients:
+  - cqbent@gmail.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

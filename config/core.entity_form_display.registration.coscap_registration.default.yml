@@ -1,0 +1,19 @@
+uuid: e97af04a-9c25-4ada-852f-642d28554df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.registration.coscap_registration.field_coscap_registration_type
+    - rng.registration_type.coscap_registration
+id: registration.coscap_registration.default
+targetEntityType: registration
+bundle: coscap_registration
+mode: default
+content:
+  field_coscap_registration_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden: {  }

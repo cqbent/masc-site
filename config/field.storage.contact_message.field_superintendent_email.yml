@@ -1,0 +1,18 @@
+uuid: 32196bec-f7e0-4d22-a367-a4bff6f1791b
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_superintendent_email
+field_name: field_superintendent_email
+entity_type: contact_message
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

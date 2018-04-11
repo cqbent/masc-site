@@ -1,0 +1,58 @@
+uuid: 2a1edf9c-47c1-4586-b080-56ff87d2deab
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.member_update_form
+    - field.field.contact_message.member_update_form.field_member_name
+    - field.field.contact_message.member_update_form.field_new_changed_information
+id: contact_message.member_update_form.default
+targetEntityType: contact_message
+bundle: member_update_form
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_member_name:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_new_changed_information:
+    weight: 52
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  mail:
+    weight: -40
+    region: content
+  message:
+    type: string_textarea
+    weight: 0
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: -50
+    region: content
+  preview:
+    weight: 50
+    region: content
+  subject:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 88bd8496-c6ce-4913-8ff2-e7b9c8f5dfa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_years_on_school_committee
+field_name: field_years_on_school_committee
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
