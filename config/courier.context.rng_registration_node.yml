@@ -1,9 +1,0 @@
-uuid: d8d9bfa7-03e4-40f2-bd23-7a82b47aa1c8
-langcode: en
-status: true
-dependencies: {  }
-id: rng_registration_node
-label: 'Event (Content): Registration'
-tokens:
-  - node
-  - registration

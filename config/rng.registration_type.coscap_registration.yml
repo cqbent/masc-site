@@ -1,7 +1,0 @@
-uuid: e5a8f643-6b25-4ab3-b90e-cfaa195a1477
-langcode: en
-status: true
-dependencies: {  }
-label: 'COSCAP Registration'
-id: coscap_registration
-description: ''

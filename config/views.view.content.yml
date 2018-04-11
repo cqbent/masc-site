@@ -695,11 +695,20 @@ display:
           plugin_id: boolean
           entity_type: node
           entity_field: status
-        langcode:
-          id: langcode
+        status_extra:
+          id: status_extra
           table: node_field_data
-          field: langcode
-          relationship: none
+          field: status_extra
+          operator: '='
+          value: false
+          plugin_id: node_status
+          group: 1
+          entity_type: node
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
           group_type: group
           admin_label: ''
           operator: in
@@ -707,12 +716,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: langcode_op
-            label: Language
+            operator_id: uid_op
+            label: Author
             description: ''
-            use_operator: false
-            operator: langcode_op
-            identifier: langcode
+            use_operator: true
+            operator: uid_op
+            identifier: uid
             required: false
             remember: false
             multiple: false
@@ -720,6 +729,9 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              registered: '0'
+              staff: '0'
+              board_of_directors: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -733,18 +745,9 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: language
-          entity_type: node
-          entity_field: langcode
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
-          operator: '='
-          value: false
-          plugin_id: node_status
-          group: 1
-          entity_type: node
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
         field_categories_target_id:
           id: field_categories_target_id
           table: node__field_categories
@@ -839,48 +842,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        body_value:
-          id: body_value
-          table: node__body
-          field: body_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: body_value_op
-            label: 'Body (body)'
-            description: ''
-            use_operator: false
-            operator: body_value_op
-            identifier: body_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registered: '0'
-              staff: '0'
-              board_of_directors: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
       sorts: {  }
       title: Content
       empty:

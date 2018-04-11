@@ -72,10 +72,6 @@ module:
   redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
-  rng: 0
-  rng_contact: 0
-  rng_quick: 0
-  rng_views: 0
   search: 0
   shortcut: 0
   simple_block: 0

@@ -3,22 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.field_event_date
     - field.field.node.event.field_event_description
     - field.field.node.event.field_fee
     - field.field.node.event.field_image
     - field.field.node.event.field_location
-    - field.field.node.event.rng_capacity
-    - field.field.node.event.rng_registrants_duplicate
-    - field.field.node.event.rng_registrants_maximum
-    - field.field.node.event.rng_registrants_minimum
-    - field.field.node.event.rng_registration_groups
-    - field.field.node.event.rng_registration_type
-    - field.field.node.event.rng_reply_to
-    - field.field.node.event.rng_status
     - node.type.event
   module:
-    - datetime
     - svg_image
     - text
     - user
@@ -27,15 +17,6 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
-  field_event_date:
-    weight: 102
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_event_description:
     weight: 101
     label: above
@@ -81,12 +62,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  rng_capacity: true
-  rng_registrants_duplicate: true
-  rng_registrants_maximum: true
-  rng_registrants_minimum: true
-  rng_registration_groups: true
-  rng_registration_type: true
-  rng_reply_to: true
-  rng_status: true
+hidden: {  }

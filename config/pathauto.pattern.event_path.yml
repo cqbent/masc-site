@@ -9,14 +9,14 @@ label: 'Event Path'
 type: 'canonical_entities:node'
 pattern: 'events/[node:title]'
 selection_criteria:
-  713a39a4-cf2d-4e2a-ba71-53acf731a216:
+  0a35ccbc-4e34-482a-b384-3db0bf02c233:
     id: node_type
     bundles:
-      event: event
+      masc_event: masc_event
     negate: false
     context_mapping:
       node: node
-    uuid: 713a39a4-cf2d-4e2a-ba71-53acf731a216
+    uuid: 0a35ccbc-4e34-482a-b384-3db0bf02c233
 selection_logic: and
 weight: -5
 relationships: {  }
