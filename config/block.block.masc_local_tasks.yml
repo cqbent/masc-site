@@ -1,0 +1,20 @@
+uuid: 903a1829-d184-47fa-baf3-56ae03c68c6f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - masc
+id: masc_local_tasks
+theme: masc
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

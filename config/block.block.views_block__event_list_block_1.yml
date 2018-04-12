@@ -1,0 +1,34 @@
+uuid: ae56f12d-19b0-4fab-b427-6043db74b9d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_list
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - masc
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__event_list_block_1
+theme: masc
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:event_list-block_1'
+settings:
+  id: 'views_block:event_list-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

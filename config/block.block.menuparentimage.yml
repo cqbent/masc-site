@@ -1,0 +1,26 @@
+uuid: ea445314-e9ec-4c2b-b625-0fa2a61a8cdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_parent_image
+    - system
+  theme:
+    - masc
+id: menuparentimage
+theme: masc
+region: featured
+weight: 0
+provider: null
+plugin: menu_parent_image
+settings:
+  id: menu_parent_image
+  label: 'Menu Parent Image'
+  provider: menu_parent_image
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

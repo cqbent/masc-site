@@ -117,3 +117,13 @@ function masc_preprocess_breadcrumb(&$variables) {
   }
   //dsm($variables['breadcrumb']);
 }
+
+/*
+ * preprocess_field hook
+ */
+function masc_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'webform') {
+    $variables['items'][0]['content']['#options']['attributes']['class'][] = 'button';
+  }
+}

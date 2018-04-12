@@ -13,7 +13,7 @@ id: node.masc_event.field_event_location
 field_name: field_event_location
 entity_type: node
 bundle: masc_event
-label: 'Event Location'
+label: Location
 description: ''
 required: false
 translatable: false

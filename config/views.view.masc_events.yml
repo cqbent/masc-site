@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.masc_event
-    - system.menu.main
   module:
     - datetime
     - node
@@ -184,7 +183,7 @@ display:
       display_extenders: {  }
       path: masc-events
       menu:
-        type: normal
+        type: none
         title: 'MASC Events'
         description: ''
         expanded: false

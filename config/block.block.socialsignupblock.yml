@@ -1,0 +1,30 @@
+uuid: 5520f054-29f7-4268-b557-302a93f4c4f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - masc_custom_blocks
+    - system
+  theme:
+    - masc
+third_party_settings:
+  block_class:
+    classes: ''
+id: socialsignupblock
+theme: masc
+region: content_bottom
+weight: 0
+provider: null
+plugin: social_signup_block
+settings:
+  id: social_signup_block
+  label: 'Social signup block'
+  provider: masc_custom_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

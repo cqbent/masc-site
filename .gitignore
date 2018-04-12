@@ -105,3 +105,6 @@ Thumbs.db
 
 # ignore replace file
 replace_wp_refs.php
+
+# ignore working directory
+/working/

@@ -13,6 +13,16 @@
     font-weight: 300;
   }
 
+  /* events */
+  .node-type-masc_event {
+    .field {
+      margin: 20px 0;
+    }
+  }
+  .field--name-webform {
+    margin: 20px 0;
+  }
+
 
   @include media($tablet) {
     padding: 0 20px;
@@ -70,3 +80,4 @@
     }
   }
 }
+

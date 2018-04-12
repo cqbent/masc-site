@@ -17,14 +17,14 @@ id: masc_event_registration
 title: 'Event Registration'
 description: 'MASC event registration form.'
 category: Registration
-elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  event_title:\n    '#type': computed_token\n    '#title': 'Event Title'\n    '#value': '[webform_submission:node:title]'\n  event_date:\n    '#type': computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': computed_token\n    '#title': 'Event Category'\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
+elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  title:\n    '#type': webform_computed_token\n    '#title': Title\n    '#value': '[webform_submission:node:title]'\n  date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': webform_computed_token\n    '#title': 'Event Category'\n    '#display_on': none\n    '#mode': text\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
 css: ''
 javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
-  page: false
-  page_submit_path: ''
+  page: true
+  page_submit_path: events/registration
   page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''

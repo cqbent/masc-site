@@ -18,17 +18,19 @@ elements: |
   event_information:
     '#type': fieldset
     '#title': 'Event Information'
-    event_title:
-      '#type': computed_token
-      '#title': 'Event Title'
+    title:
+      '#type': webform_computed_token
+      '#title': Title
       '#value': '[webform_submission:node:title]'
-    event_date:
-      '#type': computed_token
+    date:
+      '#type': webform_computed_token
       '#title': 'Event Date'
       '#value': '[webform_submission:node:field_event_date:date:short]'
     event_category:
-      '#type': computed_token
+      '#type': webform_computed_token
       '#title': 'Event Category'
+      '#display_on': none
+      '#mode': text
       '#value': '[webform_submission:node:field_event_category:entity]'
   information:
     '#title': 'Your Information'
@@ -68,8 +70,8 @@ javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
-  page: false
-  page_submit_path: ''
+  page: true
+  page_submit_path: events/registration
   page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''

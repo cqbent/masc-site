@@ -1,0 +1,26 @@
+uuid: 25567e94-0d59-4c43-9d66-2c6a6b5d1019
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - masc
+id: userlogin
+theme: masc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Login
+  provider: user
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

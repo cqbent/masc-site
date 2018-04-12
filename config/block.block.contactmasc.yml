@@ -1,0 +1,28 @@
+uuid: 2a4223a1-cff7-48f8-befa-8b4246b2dad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.contact_masc
+  module:
+    - simple_block
+    - system
+  theme:
+    - masc
+id: contactmasc
+theme: masc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'simple_block:contact_masc'
+settings:
+  id: 'simple_block:contact_masc'
+  label: 'Contact Masc'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events*\r\n<front>"
+    negate: true
+    context_mapping: {  }

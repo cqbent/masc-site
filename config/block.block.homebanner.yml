@@ -1,0 +1,28 @@
+uuid: 118b96cd-a271-41f0-a200-23672a5d443e
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.home_banner
+  module:
+    - simple_block
+    - system
+  theme:
+    - masc
+id: homebanner
+theme: masc
+region: featured
+weight: 0
+provider: null
+plugin: 'simple_block:home_banner'
+settings:
+  id: 'simple_block:home_banner'
+  label: 'Home Banner'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

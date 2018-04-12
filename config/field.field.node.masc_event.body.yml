@@ -13,7 +13,7 @@ id: node.masc_event.body
 field_name: body
 entity_type: node
 bundle: masc_event
-label: Body
+label: Description
 description: ''
 required: false
 translatable: true
