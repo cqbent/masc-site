@@ -1,5 +1,5 @@
 #breadcrumb {
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
 
 }
 .breadcrumb {
@@ -84,7 +84,7 @@
     }
     */
     @include media($medium-screen) {
-      font-size: 1em;
+      //font-size: 1em;
       //padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
     }
   }
