@@ -57,6 +57,7 @@
     "drupal/block_class": "^1.0@alpha",
     "drupal/calendar": "1.x@dev",
     "drupal/calendar_datetime": "1.x@dev",
+    "drupal/commerce": "^2.6",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
