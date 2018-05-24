@@ -1,0 +1,21 @@
+uuid: 8c0e2568-6f5d-4be1-9d10-1cd916d8d0f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_categories
+  module:
+    - text
+id: taxonomy_term.event_categories.default
+targetEntityType: taxonomy_term
+bundle: event_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

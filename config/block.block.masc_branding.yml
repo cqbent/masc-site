@@ -11,7 +11,7 @@ _core:
 id: masc_branding
 theme: masc
 region: header
-weight: -14
+weight: -15
 provider: null
 plugin: system_branding_block
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: sociallinks
 theme: masc
 region: header
-weight: -13
+weight: -14
 provider: null
 plugin: 'simple_block:social_links'
 settings:

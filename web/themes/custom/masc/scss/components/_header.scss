@@ -199,8 +199,9 @@
             //padding-top: 15px;
             width: 100%;
             min-width: 180px;
+            background-color: $blue;
+            padding-bottom: 10px;
             .menu-item {
-              background-color: $blue;
               float: none;
               margin: 0;
               padding: 0 10px;
@@ -208,9 +209,9 @@
                 color: $white;
               }
               .menu {
-                min-width: auto;
+                min-width: initial;
                 position: relative;
-                padding: 0 1em;
+                padding: 0;
               }
             }
           }
@@ -340,6 +341,15 @@
     z-index: 11;
     a {
       color: $white;
+    }
+  }
+
+  .block-masquerade {
+    float: right;
+    margin-right: 20px;
+    .form-text {
+      display: inline-block;
+      width: auto;
     }
   }
 

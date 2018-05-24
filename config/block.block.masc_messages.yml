@@ -11,7 +11,7 @@ _core:
 id: masc_messages
 theme: masc
 region: header
-weight: -10
+weight: -11
 provider: null
 plugin: system_messages_block
 settings:

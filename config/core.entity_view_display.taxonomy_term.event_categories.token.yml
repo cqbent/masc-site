@@ -1,0 +1,23 @@
+uuid: 078e0f47-1a31-4e0b-977d-0c1bb221b767
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - taxonomy.vocabulary.event_categories
+  module:
+    - text
+id: taxonomy_term.event_categories.token
+targetEntityType: taxonomy_term
+bundle: event_categories
+mode: token
+content:
+  description:
+    label: hidden
+    type: text_trimmed
+    weight: 0
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden: {  }

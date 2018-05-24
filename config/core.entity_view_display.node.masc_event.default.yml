@@ -32,12 +32,13 @@ content:
     third_party_settings: {  }
     region: content
   field_event_category:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     weight: 1
     region: content
     label: above
     settings:
-      link: true
+      view_mode: token
+      link: false
     third_party_settings: {  }
   field_event_date:
     weight: 0

@@ -59,6 +59,7 @@ module:
   link: 0
   masc_custom_blocks: 0
   masc_event_registration: 0
+  masquerade: 0
   media_entity: 0
   media_entity_image: 0
   menu_block: 0

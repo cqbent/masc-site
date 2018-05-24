@@ -17,7 +17,7 @@ settings:
   ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: ''
+  page_submit_path: member-resources/superintendent-update
   page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''
