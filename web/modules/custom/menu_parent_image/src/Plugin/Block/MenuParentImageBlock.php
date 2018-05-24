@@ -24,6 +24,7 @@ class MenuParentImageBlock extends BlockBase {
      * 2) if no feature image exists then get image from menu parent's node
      * 3) return result to theme
      */
+    $parent_menuitem = ''; $active_trail_ids = ''; $parent_menu_image = '';
     $active_trail_ids = array_filter(\Drupal::service('menu.active_trail')->getActiveTrailIds('main')); // get menu active trail id's
     if (count($active_trail_ids) > 0) {
       $parent_menuitem = array_reverse(array_keys(array_filter($active_trail_ids))); // reverse the list to get top most parent first
@@ -31,10 +32,9 @@ class MenuParentImageBlock extends BlockBase {
       //$parent_menuitem = $this->page_parent_menuitem();
       $class = count($active_trail_ids) > 1 ? 'menu-parent-image child' : 'menu-parent-image landing';
       $parent_menu_image = $this->menu_item_content($parent_menuitem) ;
-      //kint($active_trail_ids);
     }
 
-    if (isset($parent_menuitem['title'])) {
+    if (isset($parent_menu_image['title'])) {
       return array(
         '#theme' => 'menu_parent_image',
         '#image' => $parent_menu_image['image'],
@@ -49,7 +49,7 @@ class MenuParentImageBlock extends BlockBase {
     else {
       return array (
         '#type' => 'markup',
-        '#markup' => t(''),
+        '#markup' => t('nothing here, man.'),
         '#cache' => array(
           'contexts' => array('url.path'),
         ),

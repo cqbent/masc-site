@@ -3,6 +3,7 @@ $large-screen: em(860) !default;
 
 // Breakpoints
 $max-width: 1200px;
+$mobile: new-breakpoint(max-width 779px 12);
 $tablet: new-breakpoint(min-width 780px 12);
 $desktop: new-breakpoint(min-width 980px 12);
 $desktop-large: new-breakpoint(min-width $max-width 12);

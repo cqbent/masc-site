@@ -30,6 +30,7 @@
     float: left;
     z-index: 12;
     position: relative;
+    margin-left: 20px;
     img {
       width: 300px;
     }
@@ -49,11 +50,8 @@
   }
   nav.menu--main {
     font-family: $heading-font-family;
-    background-color: $blue;
     position: absolute;
     width: 100%;
-    bottom: 0;
-    padding: 0 20px;
     z-index: 11;
     h2 {
       float: right;
@@ -62,7 +60,11 @@
       text-align: center;
       letter-spacing: 1px;
       cursor: pointer;
+      font-size: 1px;
+      color: $white;
+      margin: 10px 20px 62px 0;
       @include clearfix;
+
       &:before {
         content: " ";
         width: 42px;
@@ -79,6 +81,10 @@
       clear: both;
       margin: 0 auto;
       background-color: $blue;
+      @include clearfix;
+      &.menu-level-0 {
+        padding-bottom: 10px;
+      }
       .menu-item {
         position: relative;
         //border-bottom: 1px #7ecedf solid;
@@ -88,19 +94,19 @@
         }
         a {
           display: block;
-          padding: 10px;
+          padding: 5px;
           color: $white;
         }
         &.menu-item--expanded {
           @include clearfix;
           &:before {
             content: ' ';
-            width: 40px;
-            height: 38px;
+            width: 30px;
+            height: 28px;
             background-image: url(../images/caret_down.svg);
             background-repeat: no-repeat;
             background-position: center;
-            background-color: $gray-green;
+            background-color: $light-blue;
             background-size: 50%;
             float: right;
             margin-top: 0;
@@ -115,11 +121,14 @@
           }
           .menu {
             display: none;
-            background-color: $gray-green;
+            //background-color: $light-blue;
             .menu-item {
               font-weight: 400;
               &:before {
                 display: none;
+              }
+              a {
+                padding: 0;
               }
             }
             .menu {
@@ -139,6 +148,13 @@
         display: block;
       }
     }
+
+    @include media($mobile) {
+      .menu {
+
+      }
+    }
+
     @include media($tablet) {
       .menu {
         max-width: $max-width;
@@ -150,16 +166,20 @@
         }
       }
     }
+
     @include media($desktop) {
       width: 100vw;
-      margin-left: calc((100vw - 1200px)/2 * -1);
+      bottom: 0;
       h2 {
         display: none;
       }
+
       .menu {
         display: block;
         width: 100%;
-        background: none;
+        &.menu-level-0 {
+          padding-bottom: 0;
+        }
         .menu-item, .menu-item.menu-item--expanded {
           float: left;
           margin: 0 10px;
@@ -183,6 +203,7 @@
               background-color: $blue;
               float: none;
               margin: 0;
+              padding: 0 10px;
               a {
                 color: $white;
               }
@@ -204,11 +225,17 @@
         }
       }
     }
+
+    @include media($desktop-large) {
+      background-color: $blue;
+      margin-left: calc((100vw - 1200px)/2 * -1);
+    }
   }
 
   .block-simple-blocksocial-links {
+    display: none;
     float: right;
-    //font-size: 20px;
+    margin-right: 80px;
     ul {
       list-style: none;
       li {
@@ -216,22 +243,65 @@
         padding: 0 5px;
       }
     }
+    @include media($tablet) {
+      display: block;
+    }
+    @include media($desktop) {
+      margin-right: 20px;
+    }
   }
+
   .menu--account {
-    float: right;
-    margin-right: 20px;
+    position: absolute;
+    float: none;
+    width: 100%;
+    background-color: $blue;
+    bottom: 0;
+    height: 30px;
     .menu {
+      @include clearfix;
+      text-align: center;
       .menu-item {
-        padding: 3px 10px;
-        float: left;
+        float: none;
+        display: inline-block;
+        a {
+          color: $white;
+          font-weight: 400;
+          display: block;
+          padding: 5px;
+        }
       }
     }
 
+    @include media($desktop) {
+      position: relative;
+      width: auto;
+      background: none;
+      float: right;
+      margin-right: 20px;
+      .menu {
+        text-align: left;
+        .menu-item {
+          display: block;
+          float: left;
+          a {
+            color: $blue;
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
+
   .block-search {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    margin: 0;
     clear: right;
     float: right;
-    margin-top: 10px;
+    z-index: 12;
+
     .form-item {
       display: inline-block;
       margin: 0;
@@ -244,6 +314,7 @@
         text-transform: uppercase;
       }
     }
+
     input.form-submit {
       border-radius: 0;
       padding: 5px 10px;
@@ -253,7 +324,23 @@
 
     }
 
+    @include media($desktop) {
+      position: relative;
+      top: auto;
+      margin: 10px 20px 0 0;
+      right: auto;
+    }
+
   }
 
+  .block-commerce-cart {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 11;
+    a {
+      color: $white;
+    }
+  }
 
 }

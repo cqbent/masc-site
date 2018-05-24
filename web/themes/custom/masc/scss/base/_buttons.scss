@@ -1,4 +1,4 @@
-#{$buttons-list-new} {
+#{$all-buttons} {
   appearance: none;
   background-color: $action-color;
   border: 0;
@@ -22,9 +22,6 @@
   &:focus {
     background-color: shade($action-color, 20%);
     color: #fff;
-    a {
-      color: #fff;
-    }
   }
 
   &:disabled {
@@ -35,10 +32,4 @@
       background-color: $action-color;
     }
   }
-
-  a {
-    color: #fff;
-  }
-
-
 }
