@@ -9,10 +9,15 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'create anonymous_contact rng_contact'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view commerce_product'
+  - 'view commerce_product_attribute'
+  - 'view commerce_store'
   - 'view own anonymous_contact rng_contact'
+  - 'view own commerce_order'

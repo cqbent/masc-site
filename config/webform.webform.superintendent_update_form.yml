@@ -1,30 +1,23 @@
-uuid: 02d3a652-ea83-4a3d-961a-370f3e9a4790
+uuid: bfab7b26-5c7e-4f12-a979-4fa145252b29
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - masc_event_registration
-  module:
-    - webform_scheduled_email
-_core:
-  default_config_hash: szCzGUgYi2b2Kmw3vsf2-m6uwWX6L5aTTERLrVeR-sI
+dependencies: {  }
 open: null
 close: null
-uid: null
+uid: 1
 template: false
-id: masc_event_registration
-title: 'Event Registration'
-description: 'MASC event registration form.'
-category: Registration
-elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  title:\n    '#type': webform_computed_token\n    '#title': Title\n    '#value': '[webform_submission:node:title]'\n  date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': webform_computed_token\n    '#title': 'Event Category'\n    '#display_on': none\n    '#mode': text\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
+id: superintendent_update_form
+title: 'Superintendent Update Form'
+description: ''
+category: ''
+elements: "your_name:\n  '#type': webform_name\n  '#title': 'Your Name'\n  '#title_display': before\n  '#title__access': false\n  '#suffix__access': false\n  '#degree__access': false\n  '#required': true\nyour_email:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': before\n  '#required': true\nschool_district:\n  '#type': textfield\n  '#title': 'School District'\n  '#required': true\nsuperintendent_name:\n  '#type': webform_name\n  '#title': 'Superintendent Name'\n  '#title_display': before\nsuperintendent_email:\n  '#type': email\n  '#title': 'Superintendent Email'\nsuperintendent_secretary_name:\n  '#type': webform_name\n  '#title': 'Superintendent Secretary Name'\n  '#title_display': before\n  '#title__access': false\n  '#suffix__access': false\n  '#degree__access': false\nsuperintendent_secretary_email:\n  '#type': email\n  '#title': 'Superintendent Secretary Email'\ndistrict_mailing_address:\n  '#type': webform_address\n  '#title': 'District Mailing Address'\n  '#title_display': before\n  '#country__access': false\ndistrict_fax:\n  '#type': tel\n  '#title': 'District Fax'\ndistrict_telephone:\n  '#type': tel\n  '#title': 'District Telephone'\ndistrict_website:\n  '#type': url\n  '#title': 'District Website'\nother_information:\n  '#type': textarea\n  '#title': 'Other Information'\n"
 css: ''
 javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: events/registration
+  page_submit_path: ''
   page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''
@@ -51,7 +44,7 @@ settings:
   form_login: false
   form_login_message: ''
   submission_label: ''
-  submission_log: true
+  submission_log: false
   submission_user_columns: {  }
   submission_login: false
   submission_login_message: ''
@@ -81,7 +74,7 @@ settings:
   draft_loaded_message: ''
   confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Thank you for registering.'
+  confirmation_message: ''
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -110,27 +103,35 @@ access:
       - anonymous
       - authenticated
     users: {  }
+    permissions: {  }
   view_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   purge_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   view_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   administer:
     roles: {  }
     users: {  }
@@ -140,99 +141,17 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_notification:
+  superintendent_update_confirmation:
     id: email
-    label: 'Email Notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: -49
-    settings:
-      states:
-        - completed
-      to_mail: default
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
-      subject: default
-      body: default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-  email_reminder:
-    id: scheduled_email
-    label: 'Email Reminder'
-    handler_id: email_reminder
-    status: true
-    conditions: {  }
-    weight: -48
-    settings:
-      states:
-        - completed
-      to_mail: default
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: default
-      from_options: {  }
-      from_name: default
-      subject: '[webform_submission:node:title:value]: Reminder'
-      body: default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      send: '[webform_submission:node:field_event_date:value]'
-      days: -1
-      unschedule: false
-  submission_limit:
-    id: settings
-    label: 'Submission limit'
-    handler_id: submission_limit
-    status: true
-    conditions: {  }
-    weight: -50
-    settings:
-      debug: ''
-      entity_limit_total: '[webform_submission:node:field_registration_capacity]'
-      preview_title: ''
-      preview_message: ''
-      confirmation_url: ''
-      confirmation_title: ''
-      confirmation_message: ''
-  event_registration_confirmation:
-    id: email
-    label: 'Event Registration Confirmation'
-    handler_id: event_registration_confirmation
+    label: 'Superintendent Update Confirmation'
+    handler_id: superintendent_update_confirmation
     status: true
     conditions: {  }
     weight: 0
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:values:email:raw]'
+      to_mail: '[webform_submission:values:your_email:raw]'
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -242,7 +161,39 @@ handlers:
       from_options: {  }
       from_name: default
       subject: default
-      body: "Thank your for registering for this event. Below is a record of your submission:<br />\n<br />\n[webform_submission:values]"
+      body: "Below is a record of your submission:<br />\n<br />\n[webform_submission:values]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  superintendent_update_notification:
+    id: email
+    label: 'Superintendent Update Notification'
+    handler_id: superintendent_update_notification
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: default
+      body: default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

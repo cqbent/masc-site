@@ -1,0 +1,31 @@
+uuid: 02503706-3bec-4e8a-b108-88daae59070d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - commerce_cart
+    - system
+  theme:
+    - masc
+third_party_settings:
+  block_class:
+    classes: cart
+id: cart
+theme: masc
+region: header
+weight: -8
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events*\r\n<front>"
+    negate: true
+    context_mapping: {  }
