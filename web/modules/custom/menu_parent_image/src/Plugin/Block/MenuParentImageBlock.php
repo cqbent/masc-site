@@ -49,7 +49,7 @@ class MenuParentImageBlock extends BlockBase {
     else {
       return array (
         '#type' => 'markup',
-        '#markup' => t('nothing here, man.'),
+        '#markup' => t(''),
         '#cache' => array(
           'contexts' => array('url.path'),
         ),

@@ -1,0 +1,11 @@
+uuid: a75a7fa6-d84c-4aaf-af71-1b27bd73ce73
+langcode: en
+status: true
+dependencies: {  }
+id: publication
+label: Publication
+description: ''
+variationType: default
+injectVariationFields: true
+traits: {  }
+locked: false

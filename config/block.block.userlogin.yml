@@ -10,7 +10,7 @@ dependencies:
 id: userlogin
 theme: masc
 region: sidebar_second
-weight: 0
+weight: -14
 provider: null
 plugin: user_login_block
 settings:

@@ -44,6 +44,7 @@ $base-timing: ease;
 // Buttons
 $all-buttons: 'button',
   '.button',
+  '.buttonlink a',
   'input[type="button"]',
   'input[type="reset"]',
   'input[type="submit"]';
