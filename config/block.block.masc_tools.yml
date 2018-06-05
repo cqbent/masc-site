@@ -13,7 +13,7 @@ _core:
 id: masc_tools
 theme: masc
 region: sidebar_first
-weight: -13
+weight: -15
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

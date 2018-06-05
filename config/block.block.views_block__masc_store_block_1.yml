@@ -29,6 +29,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /publications-store
+    pages: /publications/store
     negate: false
     context_mapping: {  }
