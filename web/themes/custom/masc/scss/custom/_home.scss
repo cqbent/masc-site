@@ -9,22 +9,16 @@
       position: relative;
       .image {
         width: 100vw;
-        margin-left: calc((100vw - #{$max-width}) / 2 * -1);
         img {
-          height: 600px;
+          height: 200px;
           object-fit: cover;
         }
       }
       .content {
-        position: absolute;
-        top: 0;
-        height: 600px;
         padding: 20px;
-        @include span-columns(4);
-        @include shift(6);
-        background: rgba($gray-green, .8);
+        background: $gray-green;
         color: $white;
-        font-size: rem(40);
+        font-size: rem(30);
         font-weight: 300;
         .button {
           font-size: 1rem;
@@ -34,8 +28,9 @@
   }
   main {
     background-image: url(../images/bluebk.png);
+    background-size: cover;
     max-width: 100%;
-    padding: 3em calc(calc((100vw - #{$max-width}) / 2));
+    padding: 3em;
     #content {
       h1.page-title {
         display: none;
@@ -46,23 +41,6 @@
         color: $white;
         line-height: 1em;
       }
-    }
-  }
-
-  &.one-sidebar.sidebar-second {
-    main {
-      #content {
-        @include span-columns(5);
-      }
-      #sidebar-second {
-        @include span-columns(4);
-        @include shift(1);
-      }
-    }
-  }
-  &.no-sidebars {
-    #content {
-      @include span-columns(6);
     }
   }
 
@@ -81,7 +59,8 @@
           display: block;
           position: absolute;
           top: -50px;
-          width: 100%;
+          left: calc(50% - 50px);
+          width: 100px;
           height: 100px;
           background-repeat: no-repeat;
           background-position: center;
@@ -109,19 +88,14 @@
     }
     .home-events {
       background-color: $light-gray;
-      width: 100vw;
-      padding: 20px calc(calc((100vw - #{$max-width}) / 2));
-      margin-left: calc((100vw - #{$max-width}) / 2 * -1);
       h2:before {
         background-image: url(../images/events_icon.svg);
-        //margin-left: calc((100vw - 1200px) / 2 * -1);
       }
     }
     .block-social-signup-block {
-      height: 575px;
-      margin: 50px 20px;
-      .box {
-        padding: 0 20px;
+      //margin: 50px 20px;
+      .flex-box {
+        //padding: 0 20px;
       }
       h3 {
         font-family: $base-font-family;
@@ -142,6 +116,78 @@
         }
       }
     }
+  }
+
+  @include media($tablet) {
+    &.one-sidebar.sidebar-second {
+      main {
+        #content {
+          @include span-columns(5);
+        }
+        #sidebar-second {
+          @include span-columns(4);
+          @include shift(1);
+        }
+      }
+    }
+    &.no-sidebars {
+      #content {
+        @include span-columns(6);
+      }
+    }
+
+    #featured {
+      #block-homebanner {
+        .image {
+          img {
+            height: 400px;
+          }
+        }
+        .content {
+          position: absolute;
+          top: 0;
+          height: 400px;
+          @include span-columns(6);
+          @include shift(4);
+          font-size: rem(40);
+          background: rgba($gray-green, .8);
+        }
+      }
+    }
+
+    .content-bottom {
+      .block-social-signup-block {
+        height: 575px;
+      }
+    }
+  }
+
+  @include media($desktop-large) {
+
+    #featured {
+      #block-homebanner {
+        .image {
+          margin-left: calc((100vw - #{$max-width}) / 2 * -1);
+          img {
+            height: 600px;
+          }
+        }
+        .content {
+          height: 600px;
+        }
+      }
+    }
+
+    main {
+      padding: 3em calc(calc((100vw - #{$max-width}) / 2));
+    }
+
+    .home-events {
+      width: 100vw;
+      padding: 20px calc(calc((100vw - #{$max-width}) / 2));
+      margin-left: calc((100vw - #{$max-width}) / 2 * -1);
+    }
+
   }
 
 

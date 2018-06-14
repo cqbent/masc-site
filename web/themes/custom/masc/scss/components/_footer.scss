@@ -55,11 +55,13 @@
     a {
       color: $white;
     }
+    ul.menu {
+      margin: 0;
+      text-align: center;
+    }
     .menu--top-navigation, .menu--main {
       text-transform: uppercase;
       ul.menu {
-        margin: 0;
-        text-align: center;
         .menu {
           display: none;
         }
@@ -82,12 +84,14 @@
       text-align: left;
       .block {
         float: left;
+        padding-right: 20px;
       }
-      .menu--top-navigation, .menu--main {
-        ul.menu {
-          text-align: left;
-        }
+
+      ul.menu {
+        margin: 0;
+        text-align: left;
       }
+
       .contact-info, .block-simple-blockcontactinfo {
         width: 35%;
         margin-right: -35%;

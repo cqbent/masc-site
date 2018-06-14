@@ -23,7 +23,7 @@ settings:
   id: 'views_block:home_events-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

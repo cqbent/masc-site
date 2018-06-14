@@ -72,11 +72,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: box
+          row_class: flex-box
           default_row_class: true
           type: ul
           wrapper_class: item-list
-          class: flex
+          class: flex-boxes
       row:
         type: fields
         options:
@@ -327,7 +327,20 @@ display:
           expose:
             label: ''
           granularity: second
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<a href="/events"><h2>Upcoming Events</h2></a>'
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }

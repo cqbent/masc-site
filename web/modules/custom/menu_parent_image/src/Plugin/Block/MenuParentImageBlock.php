@@ -27,6 +27,7 @@ class MenuParentImageBlock extends BlockBase {
     $parent_menuitem = ''; $active_trail_ids = ''; $parent_menu_image = '';
     $active_trail_ids = array_filter(\Drupal::service('menu.active_trail')->getActiveTrailIds('main')); // get menu active trail id's
     if (count($active_trail_ids) > 0) {
+      //dsm($active_trail_ids);
       $parent_menuitem = array_reverse(array_keys(array_filter($active_trail_ids))); // reverse the list to get top most parent first
       $parent_menuitem = reset($parent_menuitem); // get first item in array
       //$parent_menuitem = $this->page_parent_menuitem();
