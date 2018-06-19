@@ -71,6 +71,7 @@
         .views-field-title {
           font-weight: 600;
           font-size: rem(22);
+          line-height: 1.75rem;
         }
         .views-more-link {
           display: block;
@@ -125,7 +126,7 @@
           @include span-columns(5);
         }
         #sidebar-second {
-          @include span-columns(4);
+          @include span-columns(5);
           @include shift(1);
         }
       }
@@ -149,8 +150,9 @@
           height: 400px;
           @include span-columns(6);
           @include shift(4);
-          font-size: rem(40);
           background: rgba($gray-green, .8);
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -169,11 +171,12 @@
         .image {
           margin-left: calc((100vw - #{$max-width}) / 2 * -1);
           img {
-            height: 600px;
+            height: 500px;
           }
         }
         .content {
-          height: 600px;
+          height: 500px;
+          font-size: rem(40);
         }
       }
     }

@@ -100,11 +100,30 @@
     padding: 20px;
     background-color: $gray-green;
     color: $white;
+    font-size: .875rem;
     a, h2 {
       color: $white !important;
     }
     h2, .form-actions {
       text-align: center;
+    }
+    .form-item {
+      float: left;
+      width: 40%;
+      padding-right: 10px;
+      margin: 0;
+    }
+    .form-actions {
+      float: left;
+      margin-top: 25px;
+    }
+    .item-list {
+      clear: both;
+      @include clearfix;
+      li {
+        float: left;
+        margin: 0 20px 0 0;
+      }
     }
   }
 

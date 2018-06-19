@@ -7,5 +7,5 @@ dependencies:
 id: home_banner
 title: 'Home Banner'
 content:
-  value: "<div class=\"image\"><img alt=\"hero_students.jpg\" height=\"1179\" src=\"/sites/default/files/2018-03/hero_students.jpg\" width=\"2621\" /></div>\r\n<div class=\"content\">\r\n<p>Education is the key to success as an individual, as a society and as a civilization.</p>\r\n\r\n<p><a class=\"button btn\" href=\"#\">More</a></p>\r\n</div>\r\n"
+  value: "<div class=\"image\"><img alt=\"hero_students.jpg\" height=\"1179\" src=\"/sites/default/files/2018-03/hero_students.jpg\" width=\"2621\" /></div>\r\n\r\n<div class=\"content\"><div class=\"content-inner\">\r\n<p>Education is the key to success as an individual, as a society and as a civilization.</p>\r\n\r\n<p><a class=\"button btn\" href=\"#\">More</a></p>\r\n</div>\r\n</div>\r\n"
   format: full_html
