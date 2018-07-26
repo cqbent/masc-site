@@ -1,4 +1,3 @@
-uuid: 2af92cf0-a33d-48cd-a7e5-c37cc5f6ea0e
 langcode: en
 status: open
 dependencies: {  }
@@ -6,6 +5,7 @@ open: null
 close: null
 uid: 1
 template: false
+archive: false
 id: committee_appointment_form
 title: 'Committee Appointment Form'
 description: ''
@@ -46,10 +46,13 @@ settings:
   submission_label: ''
   submission_log: false
   submission_user_columns: {  }
+  submission_user_duplicate: false
   submission_login: false
   submission_login_message: ''
   submission_exception_message: ''
   submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
@@ -67,6 +70,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -141,3 +145,4 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
+uuid: 2af92cf0-a33d-48cd-a7e5-c37cc5f6ea0e

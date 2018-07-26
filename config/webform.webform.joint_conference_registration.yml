@@ -1,0 +1,303 @@
+uuid: 13293251-a725-4da1-b28c-b244368bceb5
+langcode: en
+status: open
+dependencies:
+  enforced:
+    module:
+      - masc_event_registration
+  module:
+    - webform_scheduled_email
+_core:
+  default_config_hash: szCzGUgYi2b2Kmw3vsf2-m6uwWX6L5aTTERLrVeR-sI
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: joint_conference_registration
+title: 'Joint Conference Registration'
+description: 'Registration for the MASC/MASS Joint Conference'
+category: Registration
+elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  title:\n    '#type': webform_computed_token\n    '#title': Title\n    '#value': '[webform_submission:node:title]'\n  date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': webform_computed_token\n    '#title': 'Event Category'\n    '#display_on': none\n    '#mode': text\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  nickname:\n    '#type': textfield\n    '#title': Nickname\n    '#help': 'First name to be displayed on badge'\n  position:\n    '#type': webform_select_other\n    '#title': Position\n    '#help': 'Select your position/job title&nbsp;'\n    '#options':\n      'School Committee': 'School Committee'\n      Superintendent: Superintendent\n      'Assistant Superintendent': 'Assistant Superintendent'\n      'School Business Manager': 'School Business Manager'\n      'Administrative Assistant/Secretary': 'Administrative Assistant/Secretary'\n      Attorney: Attorney\n      Student: Student\n    '#other__placeholder': 'Enter title or position...'\n    '#required': true\n    '#required_error': 'Please select a position/job title'\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  phone_number:\n    '#type': tel\n    '#title': 'Phone Number'\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\nregistration_details:\n  '#type': fieldset\n  '#title': 'Registration Details'\n  registration_type:\n    '#type': radios\n    '#title': 'Registration Type'\n    '#help': 'Please select a registration option'\n    '#options':\n      395: 'Full Registration -- Full Conference Registration ($395)'\n      195: 'Friday-Saturday Only -- Friday and Saturday Only Registration ($195)'\n      0: 'Student Registration -- No charge for students to attend!'\n    '#options_description_display': help\n    '#required': true\n    '#required_error': 'Please select a registration option'\n    '#default_value': 'Full Conference'\n  meals_wd:\n    '#type': number\n    '#title': 'Wednesday Dinner Tickets ($65)'\n    '#help': 'Number of tickets for dinner on Wednesday, November 7 ($65/each)'\n    '#default_value': '0'\n  meals_tl:\n    '#type': number\n    '#title': 'Thursday Lunch Tickets ($35)'\n    '#help': 'Number of tickets for lunch on Thursday, November 8 ($35/each)'\n    '#default_value': '0'\n  meals_td:\n    '#type': number\n    '#title': 'Thursday Dinner Tickets ($60)'\n    '#help': 'Number of tickets for dinner on Thursday, November 8 ($60/each)'\n    '#default_value': '0'\n  meals_fl:\n    '#type': number\n    '#title': 'Friday Lunch Tickets ($45)'\n    '#help': 'Number of tickets for lunch on Friday, November 9 ($45/each)'\n    '#default_value': '0'\n  meals_fd:\n    '#type': number\n    '#title': 'Friday Dinner Tickets ($60)'\n    '#help': 'Number of tickets for dinner on Friday, November 8 ($60/each)'\n    '#default_value': '0'\n  meals_sl:\n    '#type': number\n    '#title': 'Saturday Lunch Tickets ($25)'\n    '#help': 'Number of tickets for lunch on Saturday, November 10 ($25/each)'\n    '#default_value': '0'\nother_information:\n  '#type': fieldset\n  '#title': 'Other Information'\n  dietary_restrictions:\n    '#type': webform_checkboxes_other\n    '#title': 'Dietary Restrictions'\n    '#help': 'Indicate any dietary restrictions or food allergies. We will do our best to accomodate when possible.'\n    '#options':\n      Vegetarian: Vegetarian\n      Vegan: Vegan\n      Gluten-Free: Gluten-Intolerant/Celiac\n    '#other__type': textarea\n    '#other__option_label': 'Food Allergies/Other Restrictions'\n    '#other__placeholder': 'Please specify...'\n  notes:\n    '#type': textarea\n    '#title': 'Additional Information'\n    '#help': 'Include any additional information you would like to provide here'\nfee_summary:\n  '#type': fieldset\n  '#title': 'Billing Details'\n  billing_option:\n    '#type': select\n    '#title': 'Billing Option'\n    '#options':\n      'Bill District': 'Bill my school district'\n      'Bill To Address': 'Bill me at the address entered'\n    '#default_value': 'Bill District'\n  po_number:\n    '#type': textfield\n    '#title': 'Purchase Order (optional)'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: true
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: true
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: true
+  submission_user_columns:
+    - created
+    - sid
+    - label
+    - completed
+    - changed
+    - element__title
+    - element__date
+    - element__first_name
+    - element__last_name
+    - element__nickname
+    - element__position
+    - element__mailing_address
+    - element__mailing_address__address
+    - element__mailing_address__address_2
+    - element__mailing_address__city
+    - element__mailing_address__state_province
+    - element__mailing_address__postal_code
+    - element__email
+    - element__phone_number
+    - element__lunch
+    - element__registration_type
+    - element__meals_wd
+    - element__meals_tl
+    - element__meals_td
+    - element__meals_fl
+    - element__meals_fd
+    - element__meals_sl
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  autofill: true
+  autofill_message: 'We&#39;ve updated the form with your previously submitted information, but you can change the information before submitting if needed.'
+  autofill_excluded_elements:
+    title: title
+    date: date
+    event_category: event_category
+    lunch: lunch
+    registration_type: registration_type
+    meals_wd: meals_wd
+    meals_tl: meals_tl
+    meals_td: meals_td
+    meals_fl: meals_fl
+    meals_fd: meals_fd
+    meals_sl: meals_sl
+    notes: notes
+    meal_cost: meal_cost
+    registration_cost: registration_cost
+    total_cost: total_cost
+    po_number: po_number
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: authenticated
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: 'Thank you for registering.'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: true
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email_notification:
+    id: email
+    label: 'Email Notification'
+    handler_id: email_notification
+    status: true
+    conditions: {  }
+    weight: -49
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      exclude_empty_checkbox: false
+  email_reminder:
+    id: scheduled_email
+    label: 'Email Reminder'
+    handler_id: email_reminder
+    status: true
+    conditions: {  }
+    weight: -48
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: '[webform_submission:node:title:value]: Reminder'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      send: '[webform_submission:node:field_event_date:value]'
+      days: -1
+      unschedule: false
+      exclude_empty_checkbox: false
+  submission_limit:
+    id: settings
+    label: 'Submission limit'
+    handler_id: submission_limit
+    status: true
+    conditions: {  }
+    weight: -50
+    settings:
+      debug: ''
+      entity_limit_total: '[webform_submission:node:field_registration_capacity]'
+      preview_title: ''
+      preview_message: ''
+      confirmation_url: ''
+      confirmation_title: ''
+      confirmation_message: ''
+  event_registration_confirmation:
+    id: email
+    label: 'Event Registration Confirmation'
+    handler_id: event_registration_confirmation
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: "Thank your for registering for this event. Below is a record of your submission:<br />\n<br />\n[webform_submission:values]\n"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      exclude_empty_checkbox: false

@@ -68,6 +68,7 @@
     "drupal/entity": "^1.0",
     "drupal/entity_browser": "^1.4",
     "drupal/file_browser": "^1.1",
+    "drupal/geocoder": "^2.0@beta",
     "drupal/geofield_map": "^1.44",
     "drupal/imce": "^1.6",
     "drupal/leaflet": "^1.0@beta",

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.masc_event.body
+    - field.field.node.masc_event.field_end_date
     - field.field.node.masc_event.field_event_category
     - field.field.node.masc_event.field_event_date
     - field.field.node.masc_event.field_event_location
@@ -27,13 +28,22 @@ content:
   body:
     label: above
     type: text_default
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_end_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_event_category:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: content
     label: above
     settings:
@@ -50,15 +60,15 @@ content:
     type: datetime_default
     region: content
   field_event_location:
-    type: address_default
-    weight: 3
+    type: address_plain
+    weight: 4
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_location:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: content
     label: above
     settings:
@@ -74,15 +84,17 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
   links:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   webform:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       label: Register
+      dialog: ''
+      attributes: {  }
     third_party_settings: {  }
     type: webform_entity_reference_link
     region: content

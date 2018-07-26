@@ -13,11 +13,12 @@ open: null
 close: null
 uid: null
 template: false
+archive: false
 id: masc_event_registration
 title: 'Event Registration'
 description: 'MASC event registration form.'
 category: Registration
-elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  title:\n    '#type': webform_computed_token\n    '#title': Title\n    '#value': '[webform_submission:node:title]'\n  date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': webform_computed_token\n    '#title': 'Event Category'\n    '#display_on': none\n    '#mode': text\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
+elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  title:\n    '#type': webform_computed_token\n    '#title': Title\n    '#value': '[webform_submission:node:title]'\n  date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:date:short]'\n  event_category:\n    '#type': webform_computed_token\n    '#title': 'Event Category'\n    '#display_on': none\n    '#mode': text\n    '#value': '[webform_submission:node:field_event_category:entity]'\ninformation:\n  '#title': 'Your Information'\n  '#type': fieldset\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#title': 'Last Name'\n    '#type': textfield\n    '#required': true\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#country__access': false\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  lunch:\n    '#type': radios\n    '#title': Lunch\n    '#options':\n      25: '25 -- I will attend lunch'\n      0: '0 -- I do not wish to order lunch (free)'\n    '#states':\n      visible:\n        ':input[name=\"event_category\"]':\n          value: 'Charting the Course'\ntotal_cost:\n  '#type': webform_computed_twig\n  '#title': 'Total Cost'\n  '#value': \"{% if data.lunch %}\\n  ${{ data.lunch }}\\n{% endif %}\"\n  '#hide_empty': true\n  '#ajax': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Register\n"
 css: ''
 javascript: ''
 settings:
@@ -53,10 +54,13 @@ settings:
   submission_label: ''
   submission_log: true
   submission_user_columns: {  }
+  submission_user_duplicate: false
   submission_login: false
   submission_login_message: ''
   submission_exception_message: ''
   submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
@@ -74,6 +78,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -150,7 +155,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: default
+      to_mail: _default
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -159,11 +164,12 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
-      subject: default
-      body: default
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
       twig: false
@@ -182,20 +188,21 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: default
+      to_mail: _default
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
+      from_name: _default
       subject: '[webform_submission:node:title:value]: Reminder'
-      body: default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
       twig: false
@@ -238,14 +245,15 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
-      subject: default
+      from_name: _default
+      subject: _default
       body: "Thank your for registering for this event. Below is a record of your submission:<br />\n<br />\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
       twig: false

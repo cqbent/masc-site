@@ -1,4 +1,3 @@
-uuid: bfab7b26-5c7e-4f12-a979-4fa145252b29
 langcode: en
 status: open
 dependencies: {  }
@@ -6,6 +5,7 @@ open: null
 close: null
 uid: 1
 template: false
+archive: false
 id: superintendent_update_form
 title: 'Superintendent Update Form'
 description: ''
@@ -46,10 +46,13 @@ settings:
   submission_label: ''
   submission_log: false
   submission_user_columns: {  }
+  submission_user_duplicate: false
   submission_login: false
   submission_login_message: ''
   submission_exception_message: ''
   submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
@@ -67,6 +70,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -157,14 +161,15 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
-      subject: default
+      from_name: _default
+      subject: _default
       body: "Below is a record of your submission:<br />\n<br />\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
       twig: false
@@ -183,20 +188,21 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: default
+      to_mail: _default
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
-      subject: default
-      body: default
+      from_name: _default
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
       twig: false
@@ -205,3 +211,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+uuid: bfab7b26-5c7e-4f12-a979-4fa145252b29
